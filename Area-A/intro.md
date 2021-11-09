@@ -1,31 +1,11 @@
-# New Scenario Template (Your Title Here)
-
-This is a mostly empty template. To create your own first scenario, duplicate this in your own repo, then modify it as needed.
+# Security Assessment and Identification of sensitive data/user's PII
 
 ## Description
 
-2-3 sentences on what the scenario covers, illustrates, and teaches. What technology is used, and what task will the learner have accomplished by the end?
-
-Importantly, why does this matter? What can this technology, tool, or approach help you accomplish? Briefly communicate the real-world application(s) of this skill.
+An online e-commerce store where customers can browse products and complete payments and transactions. As an administration, you are going to learn how to use docker to deploy WordPress and WooCommerce and then set up the security environment. To enhance the understanding and protection of the different types of sensitive user's personal identifiable information (PII) and transaction data in the WordPress/WooCommerce platform and the backend databases. 
 
 ## Learning Objective
 
-- 3-4 bullets
-- of what you
-- will learn
-
-## Prerequisite Skills
-
-Define the target audience here, and list any prerequisite skills. For example:
-
-This is for software developers with prior experience using Jenkins to deploy web applications.
-
-## Table of Contents
-
-If the scenario is part of a set of related scenarios, the table of contents will appear here as a bulleted list of all the scenario titles, with links to each other.
-
-- Scenario A
-- Scenario B
-- Scenario C
-
-
+- Walkthrough the setting up and using Wordpress’s WooCommerce platform with sample products, customer/transaction data, and user accounts.
+- Explore how the different types of sensitive data/PII are stored in the WordPress and WooCommerce platform and backend database tables.
+- Confidentiality, Integrity, or Availability 
