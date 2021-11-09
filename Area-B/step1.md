@@ -1,7 +1,7 @@
 # Different types of external attack
 
-There are different types of 
+There are different types of attack.
 
-![phishing](phishing.png)
+![phishing](../Area-B/phishing.png)
 
 
