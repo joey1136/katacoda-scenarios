@@ -2,6 +2,6 @@
 
 There are different types of attack.
 
-![phishing](../Area-B/phishing.png)
+![phishing](../katacoda-scenarios/Area-B/phishing.png)
 
 
