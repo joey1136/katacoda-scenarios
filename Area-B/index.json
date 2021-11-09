@@ -1,8 +1,8 @@
 {
-  "title": "Prevent Attack",
-  "description": "A simple scenario example.",
-  "difficulty": "Beginner",
-  "time": "3 minutes",
+  "title": "Attack Prevention",
+  "description": "",
+  "difficulty": "intermediate",
+  "time": "60 minutes",
   "details": {
     "steps": [
       {

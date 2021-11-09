@@ -1,8 +1,7 @@
-# Heading for Step 1
+# Different types of external attack
 
-This is some text.
+There are different types of 
 
-Here's a single line of runnable code:
+![phishing](phishing.png)
 
-`printf 'Hello, world!\n\n'`{{execute}}
 
