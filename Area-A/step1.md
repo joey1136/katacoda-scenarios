@@ -22,4 +22,4 @@ Check the `mysql/mysql-server` container is runnning.
 
 `docker ps`{{execute}}
 
-[ -d /home/scrapbook/tutorial/.git ] && echo "done"
+
