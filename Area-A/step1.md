@@ -10,7 +10,7 @@ Create a docker network for communication between MySQL and WordPress containers
 
 Startup a container mysql in the background.
 
-`docker run --name mysql -d -e MYSQL_ROOT_PASSWORD=12345 -e MYSQL_DATABASE=wordpress -e MYSQL_USER=wordpress -e MYSQL_PASSWORD=12345 --network=wordpress-network -v db_data:/var/lib/mysql mysql/mysql-server`{{execute}}
+`docker run --name mysql -d -e MYSQL_ROOT_PASSWORD=12345 -e MYSQL_DATABASE=wordpress -e MYSQL_USER=wordpress -e MYSQL_PASSWORD=12345 --network=wordpress-network mysql/mysql-server`{{execute}}
 
 The following the command/environment variables explanation:
 - -d option: Container run in daemon mode/in the background
