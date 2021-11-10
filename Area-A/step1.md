@@ -18,6 +18,6 @@ The following the command/environment variables explanation:
 - MYSQL_DATABASE: Create a database with the specified name.
 - MYSQL_USER and MYSQL_PASSWORD: Create a user with the specified password. This user will be granted the superuser permissions for the database specified by the MYSQL_DATABASE variable.
 
-Check the mysql/mysql-server container is runnning.
+Check the `mysql/mysql-server` container is runnning.
 
 `docker ps`{{execute}}
