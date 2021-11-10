@@ -21,3 +21,5 @@ The following the command/environment variables explanation:
 Check the `mysql/mysql-server` container is runnning.
 
 `docker ps`{{execute}}
+
+[ -d /home/scrapbook/tutorial/.git ] && echo "done"
