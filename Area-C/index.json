@@ -1,12 +1,12 @@
 {
   "title": "Auditing,Monitoring,Alerting and Detecting Insider/External Attacks",
-  "description": "",
+  "description": "Learn how to monitoring your website's log",
   "difficulty": "Intermediate",
   "time": "60 minutes",
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Step 1 - create your grafana container",
         "text": "step1.md"
       },
       {
@@ -41,6 +41,6 @@
     "uilayout": "editor-terminal"
   },
   "backend": {
-    "imageid": "kubernetes"
+    "imageid": "nodejs:12"
   }
 }
