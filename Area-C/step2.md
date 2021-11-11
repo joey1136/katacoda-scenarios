@@ -26,7 +26,7 @@ You should click Save & test and check whether Database Conection OK
 
 You should make new datasource from mysql if the database is different
 In the following Steps, we also need to use datasource from wordpress database.
-You make skip this configuration first but you have to remember to create the datasource for wordpress database.
+You may skip this configuration first but you have to remember to create the datasource for wordpress database.
 
 
 
