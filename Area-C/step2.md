@@ -1,4 +1,4 @@
-1. Configuration on grafana
+# 1. Configuration on grafana
 
 In order to get data from database, we have to setup datasource in grafana webpage.
 
@@ -23,7 +23,14 @@ You should click Save & test and check whether Database Conection OK
 
 ![datasource_3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/datasource_detail.PNG?raw=true)
 
-2. Configuration on mysql
+
+You should make new datasource from mysql if the database is different
+In the following Steps, we also need to use datasource from wordpress database.
+You make skip this configuration first but you have to remember to create the datasource for wordpress database.
+
+
+
+# 2. Configuration on mysql
 
 In order to enable the general_log in mysql database, you have to follow the following command.
 
@@ -51,11 +58,11 @@ After that restart the container and check whether the log has succesfull enable
 
 `docker exec -it mysql bash`{{execute}}
 
-`mysql -u {your mysql user name} -p`
+Also, login to the mysql database with a admin account
+`mysql -u {your mysql username} -p`
 
 `{your password}`
 
-`SHOW global variables like 'general_log%';`{{execute}}
-
 Check that whether general_log is enabled.
+`SHOW global variables like 'log%';`{{execute}}
 
