@@ -66,3 +66,24 @@ Also, login to the mysql database with a admin account
 Check that whether general_log is enabled.
 `SHOW global variables like 'log%';`{{execute}}
 
+# 3. Configuration on wordpress
+
+Please select wordpress tab in the terminal to open the wordpress website.
+
+After login to the wordpress with your account, you will be navigate to the main page of you wordpress.
+
+In the action bar, please select Plugin and then install plugin.
+
+![wordpress_1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/wordpress_plugin.PNG?raw=true)
+
+In this page, you are able to find all plugin provided by the wordpress.
+You may search log in the search bar to find out all logging plugins.
+In this case, we will teach you how to configurate the `Simple History` Plugin
+
+![wordpress_2](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/wordpress_plugin_select.PNG?raw=true)
+
+After install the plugin, you can check all of your activity log in the Simple History tab.
+The further steps will teach you how to create a more integrated dashboard in grafana to visualize all of your log stored in mysql database.
+
+![wordpress_3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/wordpress_simpleHistory.PNG?raw=true)
+
