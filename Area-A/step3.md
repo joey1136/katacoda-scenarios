@@ -23,7 +23,7 @@ Then, login to the WordPress, you will be redirected to the WordPress admin port
 ## 2.Setup the WooCommerce plugin
 Click the `Plugins` link in the left nav of your site's dashboard and then click `Add new` button.
 
-![WooCommerce_plugin1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-A/images/7.jpg??raw=true)
+![WooCommerce_plugin1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-A/images/7.jpg?raw=true)
 
 Type 'WooCommerce' to search plugins.
 
