@@ -1,8 +1,6 @@
 # Start up the MYSQL Container
 
-First, we should start up a MYSQL database for storing the data in WordPress. Pull the MYSQL official docker image from mysql/mysql-server.
-
-`docker pull mysql/mysql-server`{{execute}}
+First, we should start up a MYSQL database for storing the data in WordPress. We will make use of the official docker image `mysql:8` in the Docker hub.
 
 Create a docker network for communication between MySQL and WordPress containers.
 
@@ -10,7 +8,7 @@ Create a docker network for communication between MySQL and WordPress containers
 
 Startup a container mysql in the background.
 
-`docker run --name mysql -d -e MYSQL_ROOT_PASSWORD=12345 -e MYSQL_DATABASE=wordpress -e MYSQL_USER=wordpress -e MYSQL_PASSWORD=12345 --network=wordpress-network -v db_data:/var/lib/mysql mysql/mysql-server`{{execute}}
+`docker run --name mysql -d -e MYSQL_ROOT_PASSWORD=12345 -e MYSQL_DATABASE=wordpress -e MYSQL_USER=wordpress -e MYSQL_PASSWORD=12345 --network=wordpress-network mysql:8`{{execute}}
 
 The following the command/environment variables explanation:
 - -d option: Container run in daemon mode/in the background
@@ -21,3 +19,5 @@ The following the command/environment variables explanation:
 Check the `mysql/mysql-server` container is runnning.
 
 `docker ps`{{execute}}
+
+

@@ -1,7 +1,7 @@
 {
   "title": "Security Assessment and Identification of sensitive data/user's PII",
   "difficulty": "Beginner",
-  "time": "3 minutes",
+  "time": "60 minutes",
   "details": {
     "steps": [
       {
@@ -15,6 +15,20 @@
       {
         "title": "Step 3",
         "text": "step3.md"
+      },
+      {
+        "title": "Step 4",
+        "text": "step4.md"
+      }
+      ,
+      {
+        "title": "Step 5",
+        "text": "step5.md"
+      }
+      ,
+      {
+        "title": "Step 6",
+        "text": "step6.md"
       }
     ],
     "intro": {
@@ -26,7 +40,10 @@
     }
   },
   "environment": {
+    "showdashboard": true,
+    "dashboards": [{"name": "Workpress", "port": 10080}],
     "uilayout": "terminal"
+    
   },
   "backend": {
     "imageid": "ubuntu:2004"
