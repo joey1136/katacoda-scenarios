@@ -1,6 +1,6 @@
 # Addressing the various data subjects rights in GDPR
 
-This is a mostly empty template. To create your own first scenario, duplicate this in your own repo, then modify it as needed.
+The official PDF of the Regulation (EU) 2016/679 (General Data Protection Regulation) in the current version of the OJ L 119, 04.05.2016; cor. OJ L 127, 23.5.2018. The European Data Protection Regulation is applicable as of May 25th, 2018 in all member states to harmonize data privacy laws across Europe. 
 
 ## Description
 
