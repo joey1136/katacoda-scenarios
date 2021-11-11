@@ -3,7 +3,7 @@
 # Installation of WordPress application
 In Katacoda, visit the WordPress website by clicking the Wordpress buttton nearby Treminal. It will pop up a new tab.
 
-![wordpress_button](./images/26.jpg?raw=true)
+![wordpress_button](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-A/images/1.jpg?raw=true)
 
 Select the language and completing the website setup process.
 
