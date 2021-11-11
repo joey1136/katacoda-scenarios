@@ -49,7 +49,7 @@ general_log = 1
 log_output = table`{{execute}}
 
 
-after that please click ctrl + D in your keyboard to stop editing the my.cnf file.
+after that please click `ctrl + D` in your keyboard to stop editing the my.cnf file.
 
 After that restart the container and check whether the log has succesfull enabled
 `exit`{{execute}}
