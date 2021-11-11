@@ -27,6 +27,7 @@
   },
   "environment": {
     "uilayout": "terminal"
+    "dashboards": [{"name": "Workpress", "port": 20080}],
   },
   "backend": {
     "imageid": "ubuntu:2004"
