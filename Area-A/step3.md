@@ -1,7 +1,7 @@
-## Access WordPress application and setup the WooCommerce plugin
+# Access WordPress application and setup the WooCommerce plugin
 
 
-# 1.Installation of WordPress application
+## 1.Installation of WordPress application
 In Katacoda, visit the WordPress website by clicking the Wordpress buttton nearby Treminal. It will pop up a new tab.
 
 ![wordpress_button](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-A/images/26.jpg?raw=true)
@@ -20,7 +20,7 @@ Then, login to the WordPress, you will be redirected to the WordPress admin port
 ![wordpress_installation3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-A/images/4.jpg?raw=true)
 ![wordpress_installation4](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-A/images/5.jpg?raw=true)
 
-# 2.Setup the WooCommerce plugin
+## 2.Setup the WooCommerce plugin
 Click the `Plugins` link in the left nav of your site's dashboard and then click `Add new` button.
 
 ![WooCommerce_plugin1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-A/images/7.jpg??raw=true)
