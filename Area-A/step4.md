@@ -18,11 +18,16 @@ Exercise: Add more differnet of the product.
 ## 2.Set up the payment method
 Click the `WooCommerce` link in the left nav of your site's dashboard and then click `setting`.
 
+
+
+
 docker exec -it mysql bash
 mysql -u root -p
 CREATE USER 'operation_team' IDENTIFIED BY '12345';
 GRANT ALL PRIVILEGES on * . * TO 'operation_team';
 show grants for 'operation_team';
+GRANT ALL ON wordpress TO 'operation_team'@'%';
+
 
 show databases;
 use wordpress;
