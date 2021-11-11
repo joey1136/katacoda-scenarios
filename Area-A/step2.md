@@ -4,7 +4,7 @@ First, pull the WordPress official docker iamge.
 
 `docker pull wordpress`{{execute}}
 
-Start the WordPress container.
+After finishing the pull of Wordpress. Start the WordPress container.
 
 `docker run -e WORDPRESS_DB_USER=wordpress -e WORDPRESS_DB_PASSWORD=12345 -e WORDPRESS_DB_HOST=mysql:3306 --name wordpress --network=wordpress-network -p 10080:80 -d wordpress`{{execute}}
 
