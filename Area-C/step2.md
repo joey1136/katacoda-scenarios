@@ -64,7 +64,8 @@ Also, login to the mysql database with a admin account
 `{your password}`
 
 Check that whether general_log is enabled.
-`SHOW global variables like 'log%';`{{execute}}
+`SHOW global variables like 'general_log%';`{{execute}}
+`SHOW global variables like 'log_output%';`{{execute}}
 
 # 3. Configuration on wordpress
 
