@@ -13,7 +13,7 @@ There are six column in the general log table
 * `server_id` - It is the server id that 
 * `comand_type` - It is the type of command made by the user, There are 5 type of command type: Connect, Query, Quit, Init DB, Field List.
 * `argument` - The original command is covert into hex number and stored in the table. 
-- You may use `convert(argument using utf8)` to convert it back to readable query.
+You may use `convert(argument using utf8)` to convert it back to readable query.
 
 you may login to the mysql container to check the above table:
 
