@@ -1,20 +1,11 @@
+## Summarize what was just learned:
 
-On the finish page, summarize what was just learned:
-
-- 3-4 bullets
-- of what you just
-- did and learned
-
-## Table of Contents
-
-If the scenario is part of a set of related scenarios, the table of contents will appear here as a bulleted list of all the scenario titles, with links to each other.
-
-- Scenario A
-- Scenario B
-- Scenario C
+- Walkthrough the setting up and using Wordpress’s WooCommerce platform with sample products, customer/transaction data, and user accounts.
+- Explore how the different types of sensitive data/PII are stored in the WordPress and WooCommerce platform and backend database tables.
+- Confidentiality, Integrity, or Availability
 
 ## Further Learning
 
-You could link to other learning resources here. What is a good next step for a learner who just completed this scenario?
+You can learn how to prevent the attack and how to auditing, monitoring, alerting and detecting Insider/External attacks in another scenario.
 
 
