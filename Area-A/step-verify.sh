@@ -1,3 +1,3 @@
 #!/bin/bash
 
-[ -d /home/scrapbook/tutorial/.git ] && echo "done"
+[docker network create wordpress-network] && echo "done"
