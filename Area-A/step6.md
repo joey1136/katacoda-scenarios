@@ -1,6 +1,6 @@
-## Create a WordPress administration account for Operation team in Mysql Databaes
+# Create a WordPress administration account for Operation team in Mysql Databaes
 
-# 1. Login as root to create account.
+## 1. Login as root to create account.
 Create a new terminal.
 
 [photo]
@@ -27,7 +27,7 @@ Create a database user by using below command. (Please make sure you login into 
 
 `CREATE USER 'operation_team' IDENTIFIED BY '12345';`{{execute}}
 
-# 2. Login as operation_team account
+## 2. Login as operation_team account
 Create another new terminal and login the database as `operation_team` by using below command.
 
 `docker exec -it mysql bash`{{execute}}
@@ -45,7 +45,7 @@ Check what permissions of the operation_team account.
 You can see there is only one database that the account can access.
 The result of show grants about `GRANT USAGE ON...`, that means there is no privileges of the account.
 
-# 3. Grant privileges to the operation_team account
+## 3. Grant privileges to the operation_team account
 Switch back to the root account terminal.
 
 Grant the wordpress administration privileges to the operation_team account by using below command.
