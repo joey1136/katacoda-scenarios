@@ -63,7 +63,6 @@ Choose the user roles as `Software development team`
 
 For Sales and Marketing team: Enter the username as `sales_and_marketing_team`, email as `sales_and_marketing_team@hotmail.com`, and password as `123456`.
 Choose the user roles as `Sales and Marketing team`
-![add_product2](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-A/images/21.jpg?raw=true)
 
 ## Exercise: Login as `Software development team` and `Sales and Marketing team` to experience the permissions in WordPress
 
