@@ -5,7 +5,5 @@ An internal attack occurs when an individual or a group within an organization s
 
 Highly-skilled and disgruntled employees (such as system administrators and programmers) or technical users who could benefit from disrupting operations may choose to initiate an internal attack against a company through its computer systems.
 
-![internal_attack](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-B/images/internal_attack.png?raw=true)
+![internal_attack](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-B/images/internal_attack.jpg?raw=true)
 
-
-More privilege than the authorization required
