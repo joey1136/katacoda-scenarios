@@ -62,11 +62,3 @@ Check what permissions of the operation_team account again.
 `show grants`{{execute}}
 
 You can find that a wordpress database has been added and the account granted all the privileges on wordpress.
-
-
-
-show databases;
-use wordpress;
-show full tables;
-select * from wp_users;
-select * from wp_wc_order_stats;
