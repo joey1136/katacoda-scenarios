@@ -38,9 +38,9 @@ Enter the password as `12345`.
 
 Check what permissions of the operation_team account.
 
-`show database`{{execute}}
+`show databases;`{{execute}}
 
-`show grants`{{execute}}
+`show grants;`{{execute}}
 
 You can see there is only one database that the account can access.
 The result of show grants about `GRANT USAGE ON...`, that means there is no privileges of the account.
@@ -57,8 +57,8 @@ Then, you can switch back to the operation_team account terminal.
 
 Check what permissions of the operation_team account again.
 
-`show database`{{execute}}
+`show databases;`{{execute}}
 
-`show grants`{{execute}}
+`show grants;`{{execute}}
 
 You can find that a wordpress database has been added and the account granted all the privileges on wordpress.
