@@ -60,4 +60,4 @@ There are four column in the wp_simple_history table.
 As mentions, different row of this table may belongs to the same log record.
 
 You may use this command to check content of the above table;
-`SELECT * FROM wordpress.wp_simple_histpory_contexts;`{{execute}}
+`SELECT * FROM wordpress.wp_simple_history_contexts;`{{execute}}
