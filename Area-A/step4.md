@@ -16,11 +16,11 @@ Click `Publish` button to publish the product.
 
 ![add_product5](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-A/images/24.jpg?raw=true)
 
-The product will be shown in the shop of the website.
+The product will be displayed in the shop.
 
 ![add_product6](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-A/images/29.jpg?raw=true)
 
-Exercise: Add more differnet of the product.
+Exercise: Add more different product.
 
 ## 2.Set up the payment method
 Click the `WooCommerce` link in the left nav of your site's dashboard and then click `setting`.
