@@ -61,7 +61,7 @@ View the cart and than click `proceed to checkout` button.
 
 Enter the information of the billing order, and then click `Place order` button.
 
-![customer_user5](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-A/images/42.jpg?raw=true)
+![customer_user5](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-A/images/66.jpg?raw=true)
 
 Your order will be successfully received.
 
