@@ -1,4 +1,4 @@
-## Introduction on log data stored in Mysql
+
 
 In the last step, we have configurated Grafana, Mysql, and Wordpress's log setting.
 In this Step, we will learn different log table stored in the Mysql database.
