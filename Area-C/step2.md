@@ -26,7 +26,7 @@ You should click Save & test and check whether Database Conection OK
 
 You should make new datasource from mysql if the database is different
 In the following Steps, we also need to use datasource from wordpress database.
-You make skip this configuration first but you have to remember to create the datasource for wordpress database.
+You may skip this configuration first but you have to remember to create the datasource for wordpress database.
 
 
 
@@ -49,7 +49,7 @@ general_log = 1
 log_output = table`{{execute}}
 
 
-after that please click ctrl + D in your keyboard to stop editing the my.cnf file.
+after that please click `ctrl + D` in your keyboard to stop editing the my.cnf file.
 
 After that restart the container and check whether the log has succesfull enabled
 `exit`{{execute}}
