@@ -30,9 +30,9 @@ Software development team is responsible for developing and maintaining the vari
 
 Name the role as `Software development team`.
 Then, you can grant the following privilege to the Software development team.
-Pages: Design a website page
-Appearance: For WordPress customization
-Plugins: Develop wordpress plugins
+- Pages: Design a website page
+- Appearance: For WordPress customization
+- Plugins: Develop wordpress plugins
 
 [photo]
 
