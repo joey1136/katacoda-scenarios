@@ -43,7 +43,7 @@ Enter the user informatio. In order to experience the customer ordering procedur
 ![add_user3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-A/images/36.jpg?raw=true)
 
 ## 4.Experience the customer ordering procedure
-Open a new Incognito Tab and enter `2886795290-10080-simba09b.environments.katacoda.com`, you should visit to your WordPress site.
+Copy the website link of the Wordprees and open it in new Incognito Tab.
 
 ![customer_user1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-A/images/38.jpg?raw=true)
 
