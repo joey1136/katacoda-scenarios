@@ -13,7 +13,7 @@ Show all the tables inside the WordPress.
 
 `show full tables;`{{execute}}
 
-You can see all the WordPress and WooCommerce table..
+You can see all the WordPress and WooCommerce table.
 Then, try to view the content of the table which contains some sensitive data.
 
 `select * from wp_usermeta;`{{execute}}
@@ -33,3 +33,7 @@ In the `wp_woocommerce_sessions` table, it will show some woocommerce log, such 
 In the `wp_wc_customer_lookup` table, it will show the user information including user name, first name, last name , email and data of last active.
 
 `select * from wp_wc_order_stats;`{{execute}}
+
+In the `wp_wc_order_stats` table, it will show the order information of the WooCommerce.
+
+You experienced how the different types of sensitive data/PII are stored in the WordPress and WooCommerce platform by backend database tables. Therefore, you have to strengthen the protection of these data.
