@@ -37,7 +37,7 @@ Check what permissions of the operation_team account.
 `show grants`{{execute}}
 
 You can see there is only one database that the account can access.
-The result of show grants about `GRANT USAGE ON *.* TO `operation_team`@`%``, that means there is no privileges of the account.
+The result of show grants about `GRANT USAGE ON...`, that means there is no privileges of the account.
 
 # 3. Grant privileges to the operation_team account
 Switch back to the root account terminal.
