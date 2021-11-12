@@ -1,3 +1,3 @@
 #!/bin/bash
 
-[docker network create wordpress-network] && echo "done"
+[$? -eq 0] && echo "done"
