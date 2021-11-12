@@ -3,6 +3,7 @@
 The official PDF of the Regulation (EU) 2016/679 (General Data Protection Regulation) in the current version of the OJ L 119, 04.05.2016; cor. OJ L 127, 23.5.2018. The European Data Protection Regulation is applicable as of May 25th, 2018 in all member states to harmonize data privacy laws across Europe. 
 
 ## The right of access
+https://wordpress.org/plugins/user-rights-access-manager/
 The data subject shall have the right to obtain from the controller confirmation as to whether or not personal data concerning him or her are being processed, and, where that is the case, access to the personal data and the following information:
 - the purposes of the processing;
 - the categories of personal data concerned;
@@ -12,7 +13,6 @@ The data subject shall have the right to obtain from the controller confirmation
 the right to lodge a complaint with a supervisory authority;
 - where the personal data are not collected from the data subject, any available information as to their source;
 - the existence of automated decision-making, including profiling, referred to in Article 22(1) and (4) and, at least in those cases, meaningful information about the logic involved, as well as the significance and the envisaged consequences of such processing for the data subject.``
-https://wordpress.org/plugins/user-rights-access-manager/
 
 ## The right to rectification
 The data subject shall have the right to obtain from the controller without undue delay the rectification of inaccurate personal data concerning him or her. 2Taking into account the purposes of the processing, the data subject shall have the right to have incomplete personal data completed, including by means of providing a supplementary statement.
