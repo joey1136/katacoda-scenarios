@@ -8,7 +8,7 @@ In this Step, we will learn different log table stored in the Mysql database.
 
 There are six column in the general log table
 * `event_time` - It is the time of when the connection / query request has made.
-* `user_hos`t - It is the username and the host of the client requested.
+* `user_host` - It is the username and the host of the client requested.
 * `thread_id` - It is a client id of your current process session
 * `server_id` - It is the server id that 
 * `comand_type` - It is the type of command made by the user, There are 5 type of command type: Connect, Query, Quit, Init DB, Field List.
