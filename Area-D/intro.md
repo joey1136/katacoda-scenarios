@@ -32,6 +32,6 @@ If the scenario is part of a set of related scenarios, the table of contents wil
 
 ## The right to object to a decision
 
-## The right not to be subject to a decision based
+## The right not to be subject to a decision
 
 
