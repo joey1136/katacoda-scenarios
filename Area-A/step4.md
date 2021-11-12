@@ -73,17 +73,3 @@ Go back to the WordPress site that is login with an administration account, you 
 ![customer_user8](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-A/images/46.jpg?raw=true)
 
 
-
-docker exec -it mysql bash
-mysql -u root -p
-CREATE USER 'operation_team' IDENTIFIED BY '12345';
-GRANT ALL PRIVILEGES on * . * TO 'operation_team';
-show grants for 'operation_team';
-GRANT ALL ON wordpress TO 'operation_team'@'%';
-
-
-show databases;
-use wordpress;
-show full tables;
-select * from wp_users;
-select * from wp_wc_order_stats;
