@@ -39,7 +39,7 @@
   },
   "environment": {
     "showdashboard": true,
-    "dashboards": [{"name": "Workpress", "port": 20080},{"name": "Grafana", "port": 3000}],
+    "dashboards": [{"name": "Workpress", "port": 10080},{"name": "Grafana", "port": 3000}],
     "uilayout": "editor-terminal"
   },
   "backend": {
