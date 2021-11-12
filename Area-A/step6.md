@@ -6,15 +6,19 @@ Create a new terminal.
 [photo]
 
 Use below command to enter the `mysql` container.
+
 `docker exec -it mysql bash`{{execute}}
 
 Login to the backend database as `root`.
+
 `mysql -u root -p`{{execute}}
 
 Enter the password as `12345`.
 
 Check what permissions of the root account;
+
 `show database`{{execute}}
+
 `show grants`{{execute}}
 
 You will find that the root account can enter different databases and grant all the privileges.
@@ -27,6 +31,7 @@ Create a database user by using below command. (Please make sure you login into 
 Create another new terminal and login the database as `operation_team` by using below command.
 
 `docker exec -it mysql bash`{{execute}}
+
 `mysql -u operation_team -p`{{execute}}
 
 Enter the password as `12345`.
@@ -34,6 +39,7 @@ Enter the password as `12345`.
 Check what permissions of the operation_team account.
 
 `show database`{{execute}}
+
 `show grants`{{execute}}
 
 You can see there is only one database that the account can access.
@@ -52,6 +58,7 @@ Then, you can switch back to the operation_team account terminal.
 Check what permissions of the operation_team account again.
 
 `show database`{{execute}}
+
 `show grants`{{execute}}
 
 You can find that a wordpress database has been added and the account granted all the privileges on wordpress.
