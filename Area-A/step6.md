@@ -1,9 +1,11 @@
 # Create a WordPress administration account for Operation team in Mysql Databaes
 
 ## 1. Login as root to create account.
-Create a new terminal.
+Create a new terminal. (Click `+` button)
 
-[photo]
+![new_terminal1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-A/images/68.jpg?raw=true)
+![new_terminal2](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-A/images/69.jpg?raw=true)
+
 
 Use below command to enter the `mysql` container.
 
