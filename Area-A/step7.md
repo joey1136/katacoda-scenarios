@@ -3,12 +3,15 @@
 There are various types of sensitive data that you may need to deal with in WordPress and WooCommerce. You can try to view the WordPress and WooCommerce table stored in a database.
 
 
+Go to the root account terminal.
 
-
-
+See 
 show databases;
 use wordpress;
-show full tables;
+
+Show all the tables inside the WordPress
+`show full tables;`
+
 
 select * from wp_usermeta;
 select * from wp_users;
