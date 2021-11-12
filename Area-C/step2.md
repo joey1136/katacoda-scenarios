@@ -12,12 +12,12 @@ After that search mysql and select it as new datasource.
 
 Please enter the following configuration into the setup.
 
-* Host - mysql container name (e.g. mysql-server)
-* Database - database name (e.g. mysql / wordpress)
-* User - your admin user account 
+* `Host` - mysql container name (e.g. mysql-server)
+* `Database` - database name (e.g. mysql / wordpress)
+* `User` - your admin user account 
 Note: please enter a user account which have permission on select data from the sepcified database
-* Password - your admin user password
-* Others - you may also enter other configuration 
+* `Password` - your admin user password
+* `Others` - you may also enter other configuration 
 
 You should click Save & test and check whether Database Conection OK
 
