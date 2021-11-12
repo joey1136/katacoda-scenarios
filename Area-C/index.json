@@ -6,15 +6,15 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1 - create your grafana container",
+        "title": "Step 1 - Create your first grafana container",
         "text": "step1.md"
       },
       {
-        "title": "Step 2 - setup logging configuration in grafana and mysql",
+        "title": "Step 2 - Setup logging configuration in Grafana, Mysql, Wordpress",
         "text": "step2.md"
       },
       {
-        "title": "Step 3",
+        "title": "Step 3 - Introduction on log data stored in Mysql",
         "text": "step3.md"
       },
       {
