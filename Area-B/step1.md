@@ -6,7 +6,7 @@ Phishing is often used to steal user data. This happens when an attacker masquer
 
 Usually,the victim is asked to click on the download link, as well as the immediate response to the request.
 
-![phishing_email](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-B/images/phishing_email.PNG?raw=true)
+![phishing_email](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-B/images/phishing_email.png?raw=true)
 
 The below picture shows the process of stealing sensitive data from the victim.
 
