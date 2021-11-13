@@ -44,14 +44,15 @@ In our "Query Session", we can insert our query and check the query output in "v
 In the time series panel, it need a time and a number of record in that time.
 Our SQL statement is like this
 `SELECT
-    $__timeGroupAlias(date,1m),
-    count(*) AS 'number'
+  $__timeGroupAlias(date,1m),
+  count(*) AS "number"
 FROM wp_simple_history
-WHERE 
-    $__timeFilter(date)
-AND message LIKE "Failed to login%"
+WHERE
+  $__timeFilter(date)
+AND message LIKE 'Failed to login%' 
 GROUP BY 1
-ORDER BY $__timeGroupAlias(date,1m)    
+ORDER BY $__timeGroup(date,1m)
+
 `
 
 * `$__timeGroupAlias(date,1m)` - it use the 'date' column in the table and separate it into 1 minutes interval, you may change the time interval such as 1h.
