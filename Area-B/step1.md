@@ -40,7 +40,7 @@ Let's look at a simple example:
 - In this case,the attack use "or 1=1", since 1=1 is always true.SQL will ingnore whether the studentid exist or not.
 - And then append ";--".In sql statement, ";" means the end of one sql statement,"--" represents the comments.
 - It will treat the statement after "--" as comment and will not execute.
-- Now,all the student information will be returned to the arracker.
+- Now,all the student information will be returned to the attacker.
 
 
 
