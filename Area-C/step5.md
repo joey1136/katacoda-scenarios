@@ -49,8 +49,8 @@ In the time series panel, it need a time and a number of record in that time.
 Our SQL statement is like this <br />
 
 SELECT <br />
-&nbsp;$__timeGroupAlias(date,1m), <br />
-&nbsp;count(*) AS "number" <br />
+&nbsp;&nbsp;$__timeGroupAlias(date,1m), <br />
+&nbsp;&nbsp;count(*) AS "number" <br />
 FROM wp_simple_history <br />
 WHERE <br />
 &nbsp;$__timeFilter(date) <br />
@@ -78,8 +78,8 @@ In the bar chart, it need a specific name and a number of record of that specifi
 Our SQL statement is like this <br />
 
 SELECT <br />
-&nbsp;l1.value, <br />
-&nbsp;count(*) as "number" <br />
+&nbsp;&nbsp;l1.value, <br />
+&nbsp;&nbsp;count(*) as "number" <br />
 from (wordpress.wp_simple_history_contexts l1 INNER JOIN wordpress.wp_simple_history l2 ON l1.history_id = l2.id) <br />
 WHERE $__timeFilter(l2.date) <br />
 AND l1.key = "_server_remote_addr" <br />
@@ -95,8 +95,8 @@ Explaination on the SQL statement:
 If you want to create another Bar chart, you must need the following: <br />
 
 SELECT <br />
-&nbsp;"name" <br />
-&nbsp;count(*) as "number" <br />
+&nbsp;&nbsp;"name" <br />
+&nbsp;&nbsp;count(*) as "number" <br />
 From "TABLE" <br />
 WHERE $__timeFilter("your time column") <br />
 GROUP BY "name" <br />
