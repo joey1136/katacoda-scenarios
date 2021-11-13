@@ -17,7 +17,8 @@
       },
       {
         "title": "Step 2 - Setup logging configuration in Grafana, Mysql, Wordpress",
-        "text": "step2.md"
+        "text": "step2.md",
+        "verify": "step2-verify.sh"
       },
       {
         "title": "Step 3 - Introduction on log data stored in Mysql",

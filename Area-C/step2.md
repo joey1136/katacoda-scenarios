@@ -44,8 +44,16 @@ After that, you have to add the following configuration in the my.cnf file in fo
 general_log = 1
 log_output = table`{{execute}}
 
-
 after that please click `ctrl + D` in your keyboard to stop editing the my.cnf file.
+
+You can check whether your setting have been write into the file by:
+
+`cat etc/my.cnf`{{execute}}
+
+If you cannot see the expected output like this, it means that you have not edit the file correctly. <br />
+`[mysqld]
+general_log = 1
+log_output = table`
 
 After that restart the container and check whether the log has succesfull enabled
 `exit`{{execute}}
