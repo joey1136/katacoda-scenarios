@@ -36,6 +36,10 @@
       {
         "title": "Step 7 - Introduction on Grafana Notification Channel",
         "text": "step7.md"
+      },
+      {
+        "title": "Step 8 - Introduction on Grafana reporter",
+        "text": "step8.md"
       }
     ],
     "intro": {
@@ -48,7 +52,7 @@
   "environment": {
     "showdashboard": true,
     "dashboards": [{"name": "Workpress", "port": 10080},{"name": "Grafana", "port": 3000}],
-    "uilayout": "editor-terminal"
+    "uilayout": "terminal"
   },
   "backend": {
     "imageid": "ubuntu:2004"
