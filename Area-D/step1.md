@@ -11,3 +11,7 @@ The data subject shall have the right to obtain from the controller confirmation
 the right to lodge a complaint with a supervisory authority;
 - where the personal data are not collected from the data subject, any available information as to their source;
 - the existence of automated decision-making, including profiling, meaningful information about the logic involved, as well as the significance and the envisaged consequences of such processing for the data subject.
+
+## Confirm identity of the requester
+When The First Request Comes In, confirm the identity of the person making the request before you export their personal data.  WordPress has a new page under `Tools → Export Personal Data` where you can send a confirmation request to the customer’s email address (or via their username, if they’re a registered user on the site):
+![Confirm_Identity](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step1/ConfirmIdentity.png?raw=true)
