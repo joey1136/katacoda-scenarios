@@ -33,7 +33,7 @@ SQL injection, also known as SQLI, is a common attack vector that uses malicious
 
 ![sql_injection](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-B/images/sql_injection.PNG?raw=true)
 
-Let's look a simple example:
+Let's look at a simple example:
 
 ![sql_injection_example](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-B/images/sql_injection_example.png?raw=true)
 
