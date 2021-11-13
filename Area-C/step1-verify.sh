@@ -1,3 +1,5 @@
+#!/bin/bash
+
 docker network ls | grep -c "wordpress-network"
 
 if [[ $? -eq 0 ]]
