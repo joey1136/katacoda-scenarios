@@ -5,6 +5,7 @@ There is no official report generating plugin from the Grafana.
 You may use Grafana Enterprise , it is a advanced version for enterprise which have much more function than the Grafana. Grafana Enterprise provide reporting function and it is very convenience.
 
 However, there is a non official reporting generating plugin, which called reporter. It also provde free pdf report generating.
+Here is the github page of this plugin : https://github.com/IzakMarais/reporter
 `Note: reporter is not work on Katacoda environment and it only works on localhost, please host all of the containers (mysql, wordpress, grafana, reporter) in your linux machine in localhost.`
 
 First, create a reporter container by:
