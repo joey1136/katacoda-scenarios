@@ -14,4 +14,7 @@ the right to lodge a complaint with a supervisory authority;
 
 ## Confirm identity of the requester
 When The First Request Comes In, confirm the identity of the person making the request before you export their personal data.  WordPress has a new page under `Tools → Export Personal Data` where you can send a confirmation request to the customer’s email address (or via their username, if they’re a registered user on the site):
+
 ![Confirm_Identity](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step1/ConfirmIdentity.png?raw=true)
+
+To send the request, type their email address in the box provided and hit “Send Request.”  They’ll receive an email with a confirmation link, which they’ll use to confirm the request. While you’re waiting for the customer to confirm, you’ll see the request displayed as “Pending.” Once they click the link, the status switches to “Confirmed”. The right of access is then granted to the person.
