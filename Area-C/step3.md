@@ -24,7 +24,8 @@ Also, login to the mysql database with a admin account
 
 `{your password}`
 
-`SELECT * FROM mysql.general_log;`{{execute}}
+The query will only output first 10 record in the table by limit 10 option, you may delete it and get all of the query in the general log table.
+`SELECT * FROM mysql.general_log limit 10;`{{execute}}
 
 
 # Table2: wp_simple_history

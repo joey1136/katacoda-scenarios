@@ -37,7 +37,7 @@ This example will teach you how to create a time series graph.
 This is an example log on the Wordpress database.
 The way to determine whether the log is a login failed log is to check the message column, if message column contain "Failed to login", we can know that it is a login failed log.
 
-![graph_1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/login_fail_MySQLexample.PNG?raw=true)
+![graph1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/login_fail_MySQLexample.PNG?raw=true)
 
 In our "Query Session", we can insert our query and check the query output in "visualized panel".
 
@@ -63,8 +63,8 @@ ORDER BY $__timeGroup(date,1m)
 
 After save, you may see that you panel have been successfully setup in the dashboard, you can change the time interval of the log data such as Last 5 minutes, Last 15 minutes.
 
-![graph_2](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/dashboard_time%20range.PNG?raw=true)
+![graph1_2](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/dashboard_time%20range.PNG?raw=true)
 
 You may also export your dashboard into JSON format clicking the share button in the top of the dashboard.
 
-![graph_3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/dashboard_export.PNG?raw=true)
+![graph1_3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/dashboard_export.PNG?raw=true)
