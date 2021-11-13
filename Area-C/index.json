@@ -6,7 +6,7 @@
   "details": {
     "steps": [
       {
-        "title": "Testing - Step 0 - Prepare your mysql and wordpress container",
+        "title": "Step 0 - Prepare your mysql and wordpress container",
         "text": "step0.md",
         "verify": "step0-verify.sh"
       },
