@@ -76,7 +76,7 @@ You should also create an account for Grafana.
 
 `CREATE USER 'Grafana'@'%' IDENTIFIED BY '12345'; `{{execute}}
 
-The accoutn should have have select permission on three table, which is mysql.general_log, wordpress.wp_simple_history, wordpress.wp_simple_history_contexts. The function of three table will be explained in the next step.
+The accout should have have select permission on three table, which is mysql.general_log, wordpress.wp_simple_history, wordpress.wp_simple_history_contexts. The function of three table will be explained in the next step.
 `GRANT SELECT ON mysql.general_log TO 'Grafana'@'%';`{{execute}}
 `GRANT SELECT ON wordpress.wp_simple_history TO 'Grafana'@'%';`{{execute}}
 `GRANT SELECT ON wordpress.wp_simple_history_contexts TO 'Grafana'@'%';`{{execute}}
