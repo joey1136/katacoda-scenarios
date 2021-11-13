@@ -46,13 +46,14 @@ You may go back to step4 - Scenario 1 to have a look on the example log in the l
 In our "Query Session", we can insert our query and check the query output in "visualized panel".
 
 In the time series panel, it need a time and a number of record in that time.
-Our SQL statement is like this
+Our SQL statement is like this <br />
+
 SELECT <br />
-  $__timeGroupAlias(date,1m), <br />
-  count(*) AS "number" <br />
+<p />$__timeGroupAlias(date,1m), <br />
+<p />count(*) AS "number" <br />
 FROM wp_simple_history <br />
 WHERE <br />
-  $__timeFilter(date) <br />
+<p />$__timeFilter(date) <br />
 AND message LIKE 'Failed to login%' <br /> 
 GROUP BY 1 <br />
 ORDER BY $__timeGroup(date,1m)
@@ -74,11 +75,11 @@ if `Data does not have a time field` is displayed, you may have no data fulfilli
 This example will teach you how to create a bar chart.
 
 In the bar chart, it need a specific name and a number of record of that specific name.
-Our SQL statement is like this
+Our SQL statement is like this <br />
 
 SELECT <br />
-  l1.value, <br />
-  count(*) as "number" <br />
+<p />l1.value, <br />
+<p />count(*) as "number" <br />
 from (wordpress.wp_simple_history_contexts l1 INNER JOIN wordpress.wp_simple_history l2 ON l1.history_id = l2.id) <br />
 WHERE $__timeFilter(l2.date) <br />
 AND l1.key = "_server_remote_addr" <br />
@@ -91,10 +92,11 @@ Explaination on the SQL statement:
 * we would like to use the inner join statement to join two table together, the joined table would like this:
 ![graph2_1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step5/ip_graph.PNG?raw=true)
 
-If you want to create another Bar chart, you must need the following:
+If you want to create another Bar chart, you must need the following: <br />
+
 SELECT <br />
-  "name" <br />
-  count(*) as "number" <br />
+<p />"name" <br />
+<p />count(*) as "number" <br />
 From "TABLE" <br />
 WHERE $__timeFilter("your time column") <br />
 GROUP BY "name" <br />
