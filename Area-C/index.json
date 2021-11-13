@@ -7,7 +7,8 @@
     "steps": [
       {
         "title": "Step 0 - Prepare your mysql and wordpress container",
-        "text": "step0.md"
+        "text": "step0.md",
+        "verify": "step1-verify.sh"
       },
       {
         "title": "Step 1 - Create your first grafana container",
