@@ -57,6 +57,8 @@ ORDER BY $__timeGroup(date,1m)
 * `ORDER BY $__timeGroup(date,1m)` - you should also change the last line if you want to change the time interval in the second line.
 `Note: Other query setting in this statement expect the above five cannot changed due to the panel setting, otherwize the panel will not show correctly.`
 
+if `Data does not have a time field` is displayed, you may have no data fulfilling your query. Please check by query it in mysql container.
+
 ![graph1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step5/login_fail_grafana.PNG?raw=true)
 
 # Example on creating log count by ip bar chart (Scenario 2)
@@ -89,6 +91,8 @@ WHERE $__timeFilter("your time column")
 GROUP BY "name"
 ORDER BY count(*) desc;
 `
+
+Exercies: you may try to create another two scenario into panel.
 
 Also, It is also a must configuration for bar chart:
 you have to change format from timeseries to table in the query input part.
