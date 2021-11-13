@@ -90,7 +90,7 @@ ORDER BY count(*) desc;
 Explaination on the SQL statement:
 * we have two table which is wp_simple_history_contexts and wp_simple_history, we name it as l1 and l2.
 * we would like to use the inner join statement to join two table together, the joined table would like this:
-![graph2_1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step5/ip_graph.PNG?raw=true)
+![graph2_1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step5/ip_graph_innerjoin.PNG?raw=true)
 
 If you want to create another Bar chart, you must need the following: <br />
 
@@ -112,6 +112,6 @@ you have to change format from timeseries to table in the query input part.
 
 The output of the graph will be like this:
 
-![graph2_3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step5/ip_graph_innerjoin.PNG?raw=true)
+![graph2_3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step5/ip_graph.PNG?raw=true)
 
 Congulations! you have basic knowlege on how to create a dashboard and different panels to prevent missue/attacks/threats scenarios.
