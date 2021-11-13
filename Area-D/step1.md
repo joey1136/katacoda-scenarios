@@ -1,5 +1,7 @@
 The right of access plays a central role in the General Data Protection Regulation (GDPR). It allows the data subject to exercise further rights, which some of them will be mentioned later. An omitted or incomplete disclosure is subject to fines.
 
+The answer to a right of access request includes two stages. First, the controller must check whether any personal data of the person seeking information is being processed at all. In any case, one must report a positive or negative result. If the answer should be positive, the second stage involves a whole range of information. 
+
 The data subject shall have the right to obtain from the controller confirmation as to whether or not personal data concerning him or her are being processed, and, where that is the case, access to the personal data and the following information:
 - the purposes of the processing;
 - the categories of personal data concerned;
