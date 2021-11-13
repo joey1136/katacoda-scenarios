@@ -32,10 +32,6 @@ Congurations. You can successfully received alert from grafana in your channel n
 
 ![slack_8](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step7/slack_8.PNG?raw=true)
 
-
-You may explore more in the Grafana Official Webpage
-https://grafana.com/docs/grafana/latest/alerting/old-alerting/notifications/
-
 # Create notification in Email (Cannot configure in Katacoda environment)
 `For your reference, the Katacoda (this learning Platform) did not provide smtp connection. You cannot create notification in this scenario. You may try it in your own linux machine.`
 
@@ -83,5 +79,8 @@ You may then Test your connection in this page.
 
 ![alert](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step7/alert_3.PNG?raw=true)
 
+
+You may explore more in the Grafana Official Webpage
+https://grafana.com/docs/grafana/latest/alerting/old-alerting/notifications/
 
 Congulations! you have basic knowlege on Grafana Notification Setting.
