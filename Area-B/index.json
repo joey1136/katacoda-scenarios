@@ -15,7 +15,8 @@
       },
       {
         "title": "Step 3",
-        "text": "step3.md"
+        "text": "step3.md",
+        "verify": "step3-verify.sh"
       },
       {
         "title": "Step 4",
@@ -39,8 +40,7 @@
       }
     ],
     "intro": {
-      "text": "intro.md",
-      "code": "foreground.sh"
+      "text": "intro.md"
     },
     "finish": {
       "text": "finish.md"

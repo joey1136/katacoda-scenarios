@@ -1,5 +1,5 @@
 {
-  "title": "Auditing,Monitoring,Alerting and Detecting Insider/External Attacks",
+  "title": "Auditing, Monitoring, Alerting and Detecting Insider/External Attacks",
   "description": "Learn how to monitoring your website's log",
   "difficulty": "Intermediate",
   "time": "120 minutes",
@@ -7,11 +7,13 @@
     "steps": [
       {
         "title": "Step 0 - Prepare your mysql and wordpress container",
-        "text": "step0.md"
+        "text": "step0.md",
+        "verify": "step0-verify.sh"
       },
       {
         "title": "Step 1 - Create your first grafana container",
-        "text": "step1.md"
+        "text": "step1.md",
+        "verify": "step1-verify.sh"
       },
       {
         "title": "Step 2 - Setup logging configuration in Grafana, Mysql, Wordpress",
@@ -36,6 +38,10 @@
       {
         "title": "Step 7 - Introduction on Grafana Notification Channel",
         "text": "step7.md"
+      },
+      {
+        "title": "Step 8 - Introduction on Grafana reporter",
+        "text": "step8.md"
       }
     ],
     "intro": {
@@ -48,7 +54,7 @@
   "environment": {
     "showdashboard": true,
     "dashboards": [{"name": "Workpress", "port": 10080},{"name": "Grafana", "port": 3000}],
-    "uilayout": "editor-terminal"
+    "uilayout": "terminal"
   },
   "backend": {
     "imageid": "ubuntu:2004"
