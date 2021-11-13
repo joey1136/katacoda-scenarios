@@ -52,14 +52,13 @@ WHERE
 AND message LIKE 'Failed to login%' 
 GROUP BY 1
 ORDER BY $__timeGroup(date,1m)
-
 `
 
 * `$__timeGroupAlias(date,1m)` - it use the 'date' column in the table and separate it into 1 minutes interval, you may change the time interval such as 1h.
 * `count(*) AS 'number'` - it count the number of row which fulfill the query.
 * `FROM wp_simple_history` - it state the table "wp_simple_history" of the query.
 * `AND message LIKE "Failed to login%"` - it is a statement state that we only want to query log if it is login failed.
-* `ORDER BY $__timeGroupAlias(date,1m)` - you should also change the last line if you want to change the time interval in the second line.
+* `ORDER BY $__timeGroup(date,1m)` - you should also change the last line if you want to change the time interval in the second line.
 `Note: Other query setting in this statement expect the above five cannot changed due to the panel setting, otherwize the panel will not show correctly.`
 
 After save, you may see that you panel have been successfully setup in the dashboard, you can change the time interval of the log data such as Last 5 minutes, Last 15 minutes.
