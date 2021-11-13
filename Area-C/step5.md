@@ -47,16 +47,16 @@ In our "Query Session", we can insert our query and check the query output in "v
 
 In the time series panel, it need a time and a number of record in that time.
 Our SQL statement is like this
-`SELECT<br />
-  $__timeGroupAlias(date,1m),<br />
-  count(*) AS "number"<br />
-FROM wp_simple_history<br />
-WHERE<br />
-  $__timeFilter(date)<br />
-AND message LIKE 'Failed to login%'<br /> 
-GROUP BY 1<br />
+SELECT <br />
+  $__timeGroupAlias(date,1m), <br />
+  count(*) AS "number" <br />
+FROM wp_simple_history <br />
+WHERE <br />
+  $__timeFilter(date) <br />
+AND message LIKE 'Failed to login%' <br /> 
+GROUP BY 1 <br />
 ORDER BY $__timeGroup(date,1m)
-`
+
 
 * `$__timeGroupAlias(date,1m)` - it use the 'date' column in the table and separate it into 1 minutes interval, you may change the time interval such as 1h.
 * `count(*) AS 'number'` - it count the number of row which fulfill the query.
@@ -75,15 +75,16 @@ This example will teach you how to create a bar chart.
 
 In the bar chart, it need a specific name and a number of record of that specific name.
 Our SQL statement is like this
-`SELECT<br />
+
+SELECT <br />
   l1.value, <br />
-  count(*) as "number"<br />
-from (wordpress.wp_simple_history_contexts l1 INNER JOIN wordpress.wp_simple_history l2 ON l1.history_id = l2.id)<br />
+  count(*) as "number" <br />
+from (wordpress.wp_simple_history_contexts l1 INNER JOIN wordpress.wp_simple_history l2 ON l1.history_id = l2.id) <br />
 WHERE $__timeFilter(l2.date) <br />
-AND l1.key = "_server_remote_addr"<br />
-GROUP BY l1.value<br />
+AND l1.key = "_server_remote_addr" <br />
+GROUP BY l1.value <br />
 ORDER BY count(*) desc;
-`
+
 
 Explaination on the SQL statement:
 * we have two table which is wp_simple_history_contexts and wp_simple_history, we name it as l1 and l2.
@@ -91,14 +92,14 @@ Explaination on the SQL statement:
 ![graph2_1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step5/ip_graph.PNG?raw=true)
 
 If you want to create another Bar chart, you must need the following:
-`SELECT<br />
-  "name"<br />
-  count(*) as "number"<br />
-From "TABLE"<br />
+SELECT <br />
+  "name" <br />
+  count(*) as "number" <br />
+From "TABLE" <br />
 WHERE $__timeFilter("your time column") <br />
-GROUP BY "name"<br />
-ORDER BY count(*) desc;<br />
-`
+GROUP BY "name" <br />
+ORDER BY count(*) desc; <br />
+
 
 Exercies: you may try to create another two scenario into panel.
 
