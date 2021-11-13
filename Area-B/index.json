@@ -28,6 +28,10 @@
       {
         "title": "Step 6",
         "text": "step6.md"
+      },
+      {
+        "title": "Step 7",
+        "text": "step7.md"
       }
     ],
     "intro": {
@@ -40,7 +44,7 @@
   },
   "environment": {
     "showdashboard": true,
-    "dashboards": [{"name": "Workpress", "port": 10080}],
+    "dashboards": [{"name": "Wordpress", "port": 10080}],
     "uilayout": "terminal"
     
   },
