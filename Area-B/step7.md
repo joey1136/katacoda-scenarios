@@ -12,7 +12,7 @@ Same as the previous step, click "Add New" button in the "Plugin" panel and sear
 
 ![XSS_plugin](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-B/images/xss_plugin.PNG?raw=true)
 
-Click "Install Now" and activate.
+Click "Install Now" and then click "Activate".
 
 We can see the plugin "Prevent XSS Vulnerability" in the plugin list.
 

@@ -5,11 +5,18 @@ The purpose of the backup is to create a copy of data that can be recovered in t
 ![backup](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-B/images/backup.jpg?raw=true)
 
 
+Fetch the file used for back up.
+
 `wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.16-1_all.deb`{{execute}}
+
+Run the command to update.
 
 `sudo apt-get update`{{execute}}
 
+Run the command to install mysql-server.
+
 `sudo apt-get install mysql-server`{{execute}}
+
 "Do you want to continue?",input "Y" in your command.
 
 Back up mysql database and store the sql file in the current directory.
