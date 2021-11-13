@@ -74,3 +74,5 @@ You may try to query by:
 ![missue4](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/missue4.PNG?raw=true)
 
 You may learn how to summarize number of query in panel in the next step.
+
+Congulations! you have basic knowlege on missue/attacks/threats scenarios.

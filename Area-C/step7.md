@@ -82,3 +82,5 @@ Congurations. You can successfully received alert from grafana in your channel n
 
 You may explore more in the Grafana Official Webpage
 https://grafana.com/docs/grafana/latest/alerting/old-alerting/notifications/
+
+Congulations! you have basic knowlege on Grafana Notification Setting.

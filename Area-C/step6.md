@@ -27,3 +27,4 @@ If you have been create a lots of alert in different panel/ dashboard. It would 
 
 ![alert_1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/alert_1.PNG?raw=true)
 
+Congulations! you have basic knowlege on Grafana Alerting.
