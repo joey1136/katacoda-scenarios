@@ -1,4 +1,4 @@
-The right of access plays a central role in the General Data Protection Regulation (GDPR). On the one hand, because only the right of access allows the data subject to exercise further rights (such as rectification and erasure). On the other hand, because an omitted or incomplete disclosure is subject to fines.
+The right of access plays a central role in the General Data Protection Regulation (GDPR). On the one hand, because only the right of access allows the data subject to exercise further rights. On the other hand, because an omitted or incomplete disclosure is subject to fines.
 
 The data subject shall have the right to obtain from the controller confirmation as to whether or not personal data concerning him or her are being processed, and, where that is the case, access to the personal data and the following information:
 - the purposes of the processing;
