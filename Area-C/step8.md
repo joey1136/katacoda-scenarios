@@ -19,7 +19,7 @@ Check the reporter container is runnning.
 Please save your dashboard and find the id of your dashboard. It is a 9 length String in the url.
 
 For example:
-https://localhost:3000/d/`dYWcUh5nz`/welcome-shop?orgId=1
+`https://localhost:3000/d/`dYWcUh5nz`/welcome-shop?orgId=1`
 
 `dYWcUh5nz` is the id of the dashboard.
 
