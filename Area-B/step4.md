@@ -13,7 +13,7 @@ WordPress has six pre-defined roles: Super Admin, Administrator, Editor, Author,
 - Contributor:somebody who can write and manage their own posts but cannot publish them.
 - Subscriber:somebody who can only manage their profile.
 
-Click the "Wordpress" button in the terminal bar and visit the webpage,choose the language you prefer and create your account.Then,sign in with your account.
+Click the "wordpress" button in the terminal bar and visit the webpage,choose the language you prefer and create your account.Then,sign in with your account.
 ![wordpress_login](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-B/images/wordpress_login.PNG?raw=true)
 
 After sign in, click the user and you can see the users in the wordpress database.

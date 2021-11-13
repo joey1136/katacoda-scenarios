@@ -44,7 +44,7 @@
   },
   "environment": {
     "showdashboard": true,
-    "dashboards": [{"name": "Wordpress", "port": 10080}],
+    "dashboards": [{"name": "wordpress", "port": 10080}],
     "uilayout": "terminal"
     
   },
