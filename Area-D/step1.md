@@ -1,7 +1,5 @@
 Individuals have the right to access and receive a copy of their personal data, and other supplementary information.
 
-GENERAL DATA PROTECTION REGULATION (GDPR) stated that
-
 The data subject shall have the right to obtain from the controller confirmation as to whether or not personal data concerning him or her are being processed, and, where that is the case, access to the personal data and the following information:
 - the purposes of the processing;
 - the categories of personal data concerned;
