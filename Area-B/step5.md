@@ -4,6 +4,7 @@ The purpose of the backup is to create a copy of data that can be recovered in t
 
 ![backup](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-B/images/backup.jpg?raw=true)
 
+Now,we use mysqldump to backup our database information.
 
 Fetch the file used for back up.
 
@@ -31,6 +32,23 @@ List all the files in the current directory.
 
 You can find the backup file.
 
-View the content of backup file.
+View the content of backup file for database.
 
 `cat backup.sql`{{execute}}
+
+Also, you can back up specified table.Take table "user" as an example.
+
+`mysqldump -u root -p mysql user >./table_backup.sql`{{execute}}
+
+List all the files 
+
+`ls`{{execute}}
+
+View the content of backup file for table.
+
+`cat table_backup.sql`{{execute}}
+
+Now,you master how to backup data by using mysqldump!
+
+
+

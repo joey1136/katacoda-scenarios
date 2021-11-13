@@ -1,6 +1,5 @@
 # Prevention tools-Least privilege priciple
 
-Least privilege priciple
 
 Least privilege access helps protect and secure privileged credentials, data and assets by limiting user access from within the network. So, the priciple could reduces their risk of gaining access to a privileged account if an attacker accesses IT environment, therefore reducing the risk of data breach.
 
