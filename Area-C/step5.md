@@ -103,8 +103,6 @@ WHERE $__timeFilter("your time column")
 GROUP BY "name" 
 ORDER BY count(*) desc;`
 
-Exercies: you may try to create another two scenario into panel.
-
 Also, It is also a must configuration for bar chart:
 you have to change format from timeseries to table in the query input part.
 
@@ -114,4 +112,6 @@ The graph will be like this:
 
 ![graph2_3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step5/ip_graph.PNG?raw=true)
 
+Exercies: you may try to create another two scenario into panel.
 Congulations! you have basic knowlege on how to create a dashboard and different panels to prevent missue/attacks/threats scenarios.
+
