@@ -20,7 +20,7 @@ You may learn how to summarize the login fail in panel in the next step.
 This is an example log on the Wordpress database.
 You may search the value column of the table `wp_simple_history_contexts` and find out all records made in specific ip address.
 
-For example, you may select all record in ip "172.17.0.0" by the following query:
+For example, you may select all record in ip "172.17.0.0" by the following query, you also can change it into your ip:
 `SELECT * from wordpress.wp_simple_history_contexts where value = '172.17.0.0';`{{execute}}
 
 Also, you may count the number of record made:
@@ -29,7 +29,7 @@ Also, you may count the number of record made:
 ![missue2](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/missue2.PNG?raw=true)
 
 you may also find out the execute time of the specific records:
-`SELECT * from wordpress.wp_simple_history where id = '9';`{{execute}}
+`SELECT * from wordpress.wp_simple_history where id = 'please input the id here';`
 
 you may also find out the execute time of the all records:
 `SELECT * from wordpress.wp_simple_history where id IN (select history_id from wordpress.wp_simple_history_contexts where value = '172.17.0.0');`{{execute}}
@@ -47,9 +47,9 @@ For example, you may select all `user_created` record by the following query:
 `SELECT history_id from wordpress.wp_simple_history_contexts where value='user_created';`{{execute}}
 
 Then, you can search those record having that id:
-`SELECT * from wordpress.wp_simple_history_contexts where history_id='9';`{{execute}}
+`SELECT * from wordpress.wp_simple_history_contexts where history_id='please input the id here';`
 And the execute time of that record:
-`SELECT * from wordpress.wp_simple_history where id='9';`{{execute}}
+`SELECT * from wordpress.wp_simple_history where id='please input the id here';`
 
 Alternatively, you may combine the query as:
 

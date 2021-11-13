@@ -2,7 +2,9 @@
 
 In our first step, we will learn how to create a grafana container.
 
-In order to create a grafana container, you have to run to above command:
+In order to create a grafana container.First, pull the grafana official docker iamge.
+
+`docker pull grafana/grafana:latest`{{execute}}
 
 `docker run --name grafana --network=wordpress-network -p 3000:3000 -d grafana/grafana:latest`{{execute}}
 
@@ -11,8 +13,11 @@ In order to create a grafana container, you have to run to above command:
 * `-p 3000:3000` means that you can access the container in port 3000
 * `grafana/grafana:latest` is the docker image you have to use
 
-After that, Please click tab Grafana in the terminal
+Check the `grafana/grafana` container is runnning.
 
+`docker ps`{{execute}}
+
+After that, Please click tab Grafana in the terminal
 
 In the Grafana page login as 
 User: `admin`
