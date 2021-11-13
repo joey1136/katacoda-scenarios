@@ -1,29 +1,70 @@
 
 
-In the last step, we have learnt how to create dashboard in Grafana using different log data stored in the Mysql database.
-In this step, we will learn how to create a alert in your panel.
+In the last step, we have learnt different log table stored in the Mysql database.
+In this step, we will learn how to create dashboard in Grafana using those log data.
 
-# Alert setup inside the panel
+# Introduction to Grafana Dashboard & Panel
 
-Inside the panel you created in the last step. You can add a alert for this panel. 
-`Note : Only graph type Time Series / Graph (OLD) have the alert function`
+In the Grafana, you can create a new dashboard in the left navigation bar or on main page.
 
-![panel_1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/panel_1.PNG?raw=true)
+![dashboard_1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/main_dashboard.png?raw=true)
 
-In the yellow area, you can select "Alert", and add alert in this tab.
-The following is the example of creating a alert.
+In your dashboard, you can create a panel or a row.
 
-* you can change the evaluation time interval of the alert
-* you also need to set the conditions of when the alert should start
-* you can change the setting when there is `No data and have execution error`, which means there should have something wrong in your database server.
-* you can change the Notification destination, message and add tags into the notification
+![dashboard_2](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/dashboard_1.PNG?raw=true)
 
-![panel_2](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/fail_alert%20setting.PNG?raw=true)
+If you select "Add an empty Panel"
+You will be redirect to a edit page.
+
+![dashboard_3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/panel_1.PNG?raw=true)
+
+There is six main session in this page you need to know:
+
+* `visualized panel (lime)` - this is the review of your panel, you may change it into table view to check whether what data you get from the query.
+* `panel type (green)` - you can select the type of this panel. 
+* `Control panel (yellow)` - you may select Query, Transform, Alert in this panel.
+* `Datasource (pink)` - you may change the datasource of you query. In our case, we have two main datasource which is Mysql and Wordpress Database.
+![dashboard_4](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/fail_choose%20datasource.PNG?raw=true)
+* `Query Session (red)` - you may change your query in this session, you can click "Edit SQL" and change it into a sql input.
+* `Panel Option (skyblue)` - you may change the detail of your panel in this session, for example Panel title, axis name, etc..
 
 
-# Alert management
+# Example on creating user failed login time series graph
 
-If you have been create a lots of alert in different panel/ dashboard. It would be difficult to management all of your alert one by one. Grafana provide a Alerting screen which can help you manage all of your alert rules and notification channels.
+Grafana's panel can centralized and visualized your log data in a human-friendly way.
+This example will teach you how to create a time series graph.
 
-![alert_1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/alert_1.PNG?raw=true)
+This is an example log on the Wordpress database.
+The way to determine whether the log is a login failed log is to check the message column, if message column contain "Failed to login", we can know that it is a login failed log.
 
+![graph_1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/login_fail_MySQLexample.PNG?raw=true)
+
+In our "Query Session", we can insert our query and check the query output in "visualized panel".
+
+In the time series panel, it need a time and a number of record in that time.
+Our SQL statement is like this
+`SELECT
+  $__timeGroupAlias(date,1m),
+  count(*) AS "number"
+FROM wp_simple_history
+WHERE
+  $__timeFilter(date)
+AND message LIKE 'Failed to login%' 
+GROUP BY 1
+ORDER BY $__timeGroup(date,1m)
+`
+
+* `$__timeGroupAlias(date,1m)` - it use the 'date' column in the table and separate it into 1 minutes interval, you may change the time interval such as 1h.
+* `count(*) AS 'number'` - it count the number of row which fulfill the query.
+* `FROM wp_simple_history` - it state the table "wp_simple_history" of the query.
+* `AND message LIKE "Failed to login%"` - it is a statement state that we only want to query log if it is login failed.
+* `ORDER BY $__timeGroup(date,1m)` - you should also change the last line if you want to change the time interval in the second line.
+`Note: Other query setting in this statement expect the above five cannot changed due to the panel setting, otherwize the panel will not show correctly.`
+
+After save, you may see that you panel have been successfully setup in the dashboard, you can change the time interval of the log data such as Last 5 minutes, Last 15 minutes.
+
+![graph_2](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/dashboard_time%20range.PNG?raw=true)
+
+You may also export your dashboard into JSON format clicking the share button in the top of the dashboard.
+
+![graph_3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/dashboard_export.PNG?raw=true)

@@ -1,84 +1,29 @@
 
 
-In the last step, we have learnt how to create a alert in your panel.
-In this step, we will learn how to create notification when alerting.
-Alert notification is import when error or attacks happen, you can receive immediate notification within email or messaging applications. For example, you can know that when someone hacking in your wordpress website as there are multiple failure login and you can take action on it immediately.
+In the last step, we have learnt how to create dashboard in Grafana using different log data stored in the Mysql database.
+In this step, we will learn how to create a alert in your panel.
+
+# Alert setup inside the panel
+
+Inside the panel you created in the last step. You can add a alert for this panel. 
+`Note : Only graph type Time Series / Graph (OLD) have the alert function`
+
+![panel_1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/panel_1.PNG?raw=true)
+
+In the yellow area, you can select "Alert", and add alert in this tab.
+The following is the example of creating a alert.
+
+* you can change the evaluation time interval of the alert
+* you also need to set the conditions of when the alert should start
+* you can change the setting when there is `No data and have execution error`, which means there should have something wrong in your database server.
+* you can change the Notification destination, message and add tags into the notification
+
+![panel_2](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/fail_alert%20setting.PNG?raw=true)
 
 
-# Create notification in Email (Cannot configure in Katacoda environment)
-`For your reference, the Katacoda (this learning Platform) did not provide smtp connection. You can create notification through Email but you cannot test in this scenario. You may try it in your own linux machine.`
+# Alert management
 
-First step is to check whether any smtp connection is available in your linux. We will use Gmail as an example.
+If you have been create a lots of alert in different panel/ dashboard. It would be difficult to management all of your alert one by one. Grafana provide a Alerting screen which can help you manage all of your alert rules and notification channels.
 
-`telnet smtp.gmail.com 587`{{execute}}
+![alert_1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/alert_1.PNG?raw=true)
 
-If you try it in your linux machine and have smtp connection, the output should be similar to this:
-
-`Trying 74.125.200.108...
-Connected to smtp.gmail.com (74.125.200.108).
-Escape character is '^]'.
-220 smtp.gmail.com ESMTP o90sm11695907pfi.17 - gsmtp`
-
-If you try it in this scenario, the output should be similar to this:
-
-`Trying 142.251.5.109...
-Trying 2a00:1450:400c:c1b::6c...
-telnet: Unable to connect to remote host: Network is unreachable`
-
-In your Grafana Container:
-`docker exec -it grafana bash`{{execute}}
-
-you should have a file name grafana.ini in path /etc/grafana/grafana.ini
-
-you have to change the content of this file by:
-`cat -> /etc/grafana/grafana.ini`{{execute}}
-
-`[smtp]
-enable = true
-root= "youremail@gmail.com"
-host=smtp.gmail.com:465
-user= "youremail@gmail.com"
-password= yourpassword
-skip_verify = true
-from_address = "youremail@gmail.com"
-from_name = Grafana`
-
-After that restart the grafana container to enable the settings.
-`docker restart grafana`{{execute}}
-
-Please go to alerting page in the Grafana Page and setup your notication channel:
-You may then Test your connection in this page.
-
-![alert](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/alert_3.PNG?raw=true)
-
-# Create notification in Slack
-
-In your Slack Group, create a new channel in the left navigation bar. You may name it as alerting.
-
-![slack_1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/slack_1.PNG?raw=true)
-![slack_2](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/slack_2.PNG?raw=true)
-
-Then add an Apps into the channel setting.
-
-![slack_3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/slack_3.PNG?raw=true)
-
-Install Incoming WebHooks to send the grafana alert into the channel
-
-![slack_4](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/slack_4.PNG?raw=true)
-
-Select your new channel "alert" and add incoming webhooks integration.
-
-![slack_5](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/slack_5.PNG?raw=true)
-
-After that, copy the webhook URL and configure notification channel in Grafana.
-
-![slack_6](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/slack_6.PNG?raw=true)
-![slack_7](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/slack_7.PNG?raw=true)
-
-Congurations. You can successfully received alert from grafana in your channel now.
-
-![slack_8](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/slack_8.PNG?raw=true)
-
-
-You may explore more in the Grafana Official Webpage
-https://grafana.com/docs/grafana/latest/alerting/old-alerting/notifications/
