@@ -1,5 +1,8 @@
 #!/bin/bash
 
 docker ps | grep -c "wordpress"
-[$? -eq 0] && echo "done"    
-
+  
+if [[ $? -eq 0 ]]
+  then   
+      echo "done"    
+  fi
