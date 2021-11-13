@@ -57,12 +57,12 @@ Trying 2a00:1450:400c:c1b::6c...
 telnet: Unable to connect to remote host: Network is unreachable`
 
 In your Grafana Container:
-`docker exec -it grafana bash`{{execute}}
+`docker exec -it grafana bash`
 
 you should have a file name grafana.ini in path /etc/grafana/grafana.ini
 
 you have to change the content of this file by:
-`cat -> /etc/grafana/grafana.ini`{{execute}}
+`cat -> /etc/grafana/grafana.ini`
 
 you can copy and paste these configuration and press Ctrl + D finish editing.
 `[smtp]
@@ -76,7 +76,7 @@ from_address = "youremail@gmail.com"
 from_name = Grafana`
 
 After that restart the grafana container to enable the settings.
-`docker restart grafana`{{execute}}
+`docker restart grafana`
 
 Please go to alerting page in the Grafana Page and setup your notication channel:
 You may then Test your connection in this page.
