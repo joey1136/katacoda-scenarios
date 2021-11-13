@@ -10,11 +10,11 @@ Here is the github page of this plugin : https://github.com/IzakMarais/reporter
 
 First, create a reporter container by:
 
-`docker run --name reporter -d -p 8080:8080 --net="wordpress-network" izakmarais/grafana-reporter`{{execute}}
+`docker run --name reporter -d -p 8080:8080 --net="wordpress-network" izakmarais/grafana-reporter`
 
 Check the reporter container is runnning.
 
-`docker ps`{{execute}}
+`docker ps`
 
 Please save your dashboard and find the id of your dashboard. It is a 9 length String in the url.
 
@@ -37,6 +37,6 @@ After saving, you can see there is a new button appear in the right top of your 
 
 Alternatively, you also can create your report inside your reporter container.
 
-`docker exec -it reporter bash`{execute}
+`docker exec -it reporter bash`
 
 `grafana-reporter -cmd_enable=1 -cmd_apiKey [api-key] -ip localhost:3000 -cmd_dashboard 'dashboard id' -cmd_ts from=now-1y -cmd_o out.pdf`
