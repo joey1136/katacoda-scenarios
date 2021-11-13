@@ -1,4 +1,4 @@
-The right of access plays a central role in the General Data Protection Regulation (GDPR). It allows the data subject to exercise further rights, which some of them will be mentioned later. On the other hand, because an omitted or incomplete disclosure is subject to fines.
+The right of access plays a central role in the General Data Protection Regulation (GDPR). It allows the data subject to exercise further rights, which some of them will be mentioned later. An omitted or incomplete disclosure is subject to fines.
 
 The data subject shall have the right to obtain from the controller confirmation as to whether or not personal data concerning him or her are being processed, and, where that is the case, access to the personal data and the following information:
 - the purposes of the processing;
