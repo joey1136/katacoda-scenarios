@@ -1,81 +1,66 @@
 
 
-In the last step, we have learn different log table stored in the Mysql database.
-In this Step, we will learn examples of missue/attacks/threats that will be logged.
+In the last step, we have configurated Grafana, Mysql, and Wordpress's log setting.
+In this Step, we will learn different log table stored in the Mysql database.
 
-# Scenario 1. Someone hacking your wordpress by guessing your account password. (External)
+# Table1 : general_log
+"general_log" is a table in "Mysql" database, it stores all of the general record of what mysqld is doing. It writes information of client connect or disconect, query request from clients.
 
-This is an example log on the Wordpress database.
-The way to determine whether the log is a login failed log is to check the message column, if message column contain "Failed to login", we can know that it is a login failed log. If failure continute for long time / many times. You may know that someone is hacking your account.
+There are six column in the general log table
+* `event_time` - It is the time of when the connection / query request has made.
+* `user_host` - It is the username and the host of the client requested.
+* `thread_id` - It is a client id of your current process session
+* `server_id` - It is the server id that 
+* `comand_type` - It is the type of command made by the user, There are 5 type of command type: Connect, Query, Quit, Init DB, Field List.
+* `argument` - The original command is covert into hex number and stored in the table. 
+You may use `convert(argument using utf8)` to convert it back to readable query.
 
-You may try to query by:
-`SELECT * from wordpress.wp_simple_history where level = 'warning';`{{execute}}
+you may login to the mysql container to check the above table:
 
-![missue1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step4/login_fail_MySQLexample.PNG?raw=true)
+`docker exec -it mysql bash`{{execute}}
 
-You may learn how to summarize the login fail in panel in the next step.
+Also, login to the mysql database with a admin account
+`mysql -u {your mysql username} -p`
 
-# Scenario 2. Someone DDos on your website. (External)
+`{your password}`
 
-This is an example log on the Wordpress database.
-You may search the value column of the table `wp_simple_history_contexts` and find out all records made in specific ip address.
+The query will only output first 10 record in the table by limit 10 option, you may delete it and get all of the query in the general log table.
+`SELECT * FROM mysql.general_log limit 10;`{{execute}}
 
-For example, you can search all ip requested in the log table
-`SELECT value from wordpress.wp_simple_history_contexts where wordpress.wp_simple_history_contexts.key = "_server_remote_addr";`{{execute}}
 
-And you may s elect all record in specific ip "172.17.0.0" by the following query:
-`SELECT * from wordpress.wp_simple_history_contexts where value = '172.17.0.0';`{{execute}}
+# Table2: wp_simple_history
+"wp_simple_history" is a table in "wordpress" database, it stores some simple log occur in wordpress website such as what plugin has been installed.
+It is useful for you to manage your wordpress website and trace the change of the website.
 
-Also, you may count the number of record made:
-`SELECT count(*) from wordpress.wp_simple_history_contexts where value = '172.17.0.0';`{{execute}}
+`Note: this table is created after install the "Simple History" plugin in the wordpress, if you cannot find this table, please return to the last step and following the configuration on Wordpress.`
 
-![missue2](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step4/missue2.PNG?raw=true)
+There are seven column in the wp_simple_history table.
+* `id` - It is the index of the log recorded.
+* `date` - It is the time of when the log has made. 
+* `logger` - It is type of logger of the record. There are two type of logger: SimplePluginLogger and SimpleLogger. SimpleLogger is some information from the plugin.
+* `level` - It is the type of log.
+* `message` - It is the message of the log.
+* `occasionsID` - It is like the user id of log made.
+* `initiator` - It state that whether the change is made by wp_user or by wordpress server.
 
-you may also find out the execute time of the specific records:
-`SELECT * from wordpress.wp_simple_history where id = 'please input the id here';`
+You may use this command to check content of the above table;
+`SELECT * FROM wordpress.wp_simple_history;`{{execute}}
 
-you may also find out the execute time of the all records:
-`SELECT * from wordpress.wp_simple_history where id IN (select history_id from wordpress.wp_simple_history_contexts where value = '172.17.0.0');`{{execute}}
 
-![missue2_1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step4/missue2_1.PNG?raw=true)
+# Table3: wp_simple_histpory_contexts
+"wp_simple_histpory_contexts" is a table in "wordpress" database, it stores all of the general log occur in wordpress website such as what plugin has been installed, tranaction maded, user profile modified, or the log in/ log out time.
 
-You may learn how to summarize the ip record in panel in the next step.
+`Note: this table is created after install the "Simple History" plugin in the wordpress, if you cannot find this table, please return to the last step and following the configuration on Wordpress.`
 
-# Scenario 3. Someone in your company changed your wordpress settings/transaction records. (Internal)
+There are four column in the wp_simple_history table.
+* `context_id` - It is the index of the row of log.
+* `history_id` - It is the index of each log, different row in the table have the same hisotry_id is belonging to the same log record.
+* `key` - It is the key of each log record. There are different type of key for different type of log record. For example, Each log in log record may have _user_id, _user_login, _user_email three type of key. 
+* `value` - It is the value according to the key in last column.
 
-This is an example log on the Wordpress database.
-You may search the value column of the table `wp_simple_history_contexts` and find out all records.
+As mentions, different row of this table may belongs to the same log record.
 
-For example, you may select all `user_created` record by the following query:
-`SELECT history_id from wordpress.wp_simple_history_contexts where value='user_created';`{{execute}}
+You may use this command to check content of the above table;
+`SELECT * FROM wordpress.wp_simple_history_contexts;`{{execute}}
 
-Then, you can search those record having that id:
-`SELECT * from wordpress.wp_simple_history_contexts where history_id='please input the id here';`
-And the execute time of that record:
-`SELECT * from wordpress.wp_simple_history where id='please input the id here';`
-
-Alternatively, you may combine the query as:
-
-`SELECT * from wordpress.wp_simple_history_contexts where (SELECT history_id from wordpress.wp_simple_history_contexts where value = 'user_created') = history_id;`{{execute}}
-
-`SELECT * from wordpress.wp_simple_history where (SELECT history_id from wordpress.wp_simple_history_contexts where value = 'user_created') = id;`{{execute}}
-
-![missue3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step4/missue3.PNG?raw=true)
-
-You may learn how to summarize the setting changed in panel in the next step.
-
-# scenario 4. Someone (unauthorized) login to the mysql and stole the personal informations of customer. (Internal/External)
-
-This is an example log on the Mysql database.
-There is a record for each query with command_type = query. Also, there is a log time,useraccount and the host address which created this query request. 
-* You can know that maybe someone outside has stole your database records if there are large amount of query made in a non-authorized host address. 
-* You may also know that if somebody in your company using the company's computer to stole the personal information stored in the database and sold it out.
-
-You may try to query by:
-`SELECT event_time,user_host,convert(argument using utf8) from mysql.general_log limit 10;`{{execute}}
-
-![missue4](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step4/missue4.PNG?raw=true)
-
-You may learn how to summarize number of query in panel in the next step.
-
-Congulations! you have basic knowlege on missue/attacks/threats scenarios.
+Congulations! you have enough knowlege on different log table stored in the Mysql database.

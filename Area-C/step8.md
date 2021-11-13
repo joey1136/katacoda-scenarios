@@ -1,42 +1,86 @@
 
 
-# Generate report for dashboard using reporter (Cannot configure in Katacoda environment)
-There is no official report generating plugin from the Grafana.
-You may use Grafana Enterprise , it is a advanced version for enterprise which have much more function than the Grafana. Grafana Enterprise provide reporting function and it is very convenience.
+In the last step, we have learnt how to create a alert in your panel.
+In this step, we will learn how to create notification when alerting.
+Alert notification is import when error or attacks happen, you can receive immediate notification within email or messaging applications. For example, you can know that when someone hacking in your wordpress website as there are multiple failure login and you can take action on it immediately.
 
-However, there is a non official reporting generating plugin, which called reporter. It also provde free pdf report generating.
-Here is the github page of this plugin : https://github.com/IzakMarais/reporter
-`Note: reporter is not work on Katacoda environment and it only works on localhost, please host all of the containers (mysql, wordpress, grafana, reporter) in your linux machine in localhost.`
+# Create notification in Slack
 
-First, create a reporter container by:
+In your Slack Group, create a new channel in the left navigation bar. You may name it as alerting.
 
-`docker run --name reporter -d -p 8080:8080 --net="wordpress-network" izakmarais/grafana-reporter`
+![slack_1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step7/slack_1.PNG?raw=true)
+![slack_2](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step7/slack_2.PNG?raw=true)
 
-Check the reporter container is runnning.
+Then add an Apps into the channel setting.
 
-`docker ps`
+![slack_3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step7/slack_3.PNG?raw=true)
 
-Please save your dashboard and find the id of your dashboard. It is a 9 length String in the url.
+Install Incoming WebHooks to send the grafana alert into the channel
 
-For example:
-`https://localhost:3000/d/`dYWcUh5nz`/welcome-shop?orgId=1`
+![slack_4](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step7/slack_4.PNG?raw=true)
 
-`dYWcUh5nz` is the id of the dashboard.
+Select your new channel "alert" and add incoming webhooks integration.
 
-Then go to Setting page of your dashboard by clicking the `gear` button and then select link.
+![slack_5](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step7/slack_5.PNG?raw=true)
 
-![addLink](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step8/dashboard_link.PNG?raw=true)
+After that, copy the webhook URL and configure notification channel in Grafana.
 
-You should add the this link and set it as Report:
-https://localhost:8080/api/v5/report/"your dashboard id"
-![addLink_1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step8/dashboard_link_1.PNG?raw=true)
+![slack_6](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step7/slack_6.PNG?raw=true)
+![slack_7](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step7/slack_7.PNG?raw=true)
 
-After saving, you can see there is a new button appear in the right top of your dashboard
+Congurations. You can successfully received alert from grafana in your channel now.
 
-![addLink_2](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step8/dashboard_link_2.PNG?raw=true)
+![slack_8](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step7/slack_8.PNG?raw=true)
 
-Alternatively, you also can create your report inside your reporter container.
+# Create notification in Email (Cannot configure in Katacoda environment)
+`For your reference, the Katacoda (this learning Platform) did not provide smtp connection. You cannot create notification in this scenario. You may try it in your own linux machine.`
 
-`docker exec -it reporter bash`
+First step is to check whether any smtp connection is available in your linux. We will use Gmail as an example.
 
-`grafana-reporter -cmd_enable=1 -cmd_apiKey [api-key] -ip localhost:3000 -cmd_dashboard 'dashboard id' -cmd_ts from=now-1y -cmd_o out.pdf`
+`telnet smtp.gmail.com 587`{{execute}}
+
+If you try it in your linux machine and have smtp connection, the output should be similar to this:
+
+`Trying 74.125.200.108...
+Connected to smtp.gmail.com (74.125.200.108).
+Escape character is '^]'.
+220 smtp.gmail.com ESMTP o90sm11695907pfi.17 - gsmtp`
+
+If you try it in this scenario, the output should be similar to this:
+
+`Trying 142.251.5.109...
+Trying 2a00:1450:400c:c1b::6c...
+telnet: Unable to connect to remote host: Network is unreachable`
+
+In your Grafana Container:
+`docker exec -it grafana bash`
+
+you should have a file name grafana.ini in path /etc/grafana/grafana.ini
+
+you have to change the content of this file by:
+`cat -> /etc/grafana/grafana.ini`
+
+you can copy and paste these configuration and press Ctrl + D finish editing.
+`[smtp]
+enable = true
+root= "youremail@gmail.com"
+host=smtp.gmail.com:465
+user= "youremail@gmail.com"
+password= yourpassword
+skip_verify = true
+from_address = "youremail@gmail.com"
+from_name = Grafana`
+
+After that restart the grafana container to enable the settings.
+`docker restart grafana`
+
+Please go to alerting page in the Grafana Page and setup your notication channel:
+You may then Test your connection in this page.
+
+![alert](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step7/alert_3.PNG?raw=true)
+
+
+You may explore more in the Grafana Official Webpage
+https://grafana.com/docs/grafana/latest/alerting/old-alerting/notifications/
+
+Congulations! you have basic knowlege on Grafana Notification Setting.

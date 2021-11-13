@@ -1,6 +1,6 @@
 #!/bin/bash
 
-docker exec -it mysql cat etc/my.cnf | grep -c "general_log = 1"
+docker ps | grep -c "grafana"
 
 if [[ $? -eq 0 ]]
   then 

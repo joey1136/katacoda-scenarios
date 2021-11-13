@@ -6,42 +6,42 @@
   "details": {
     "steps": [
       {
-        "title": "Step 0 - Prepare your mysql and wordpress container",
-        "text": "step0.md",
-        "verify": "step0-verify.sh"
-      },
-      {
-        "title": "Step 1 - Create your first grafana container",
+        "title": "Step 1 - Prepare your mysql and wordpress container",
         "text": "step1.md",
         "verify": "step1-verify.sh"
       },
       {
-        "title": "Step 2 - Setup logging configuration in Grafana, Mysql, Wordpress",
-        "text": "step2.md"
+        "title": "Step 2 - Create your first grafana container",
+        "text": "step2.md",
+        "verify": "step2-verify.sh"
       },
       {
-        "title": "Step 3 - Introduction on log data stored in Mysql",
+        "title": "Step 3 - Setup logging configuration in Grafana, Mysql, Wordpress",
         "text": "step3.md"
       },
       {
-        "title": "Step 4 - Example of missue/attacks/threats that can detect using the log data",
+        "title": "Step 4 - Introduction on log data stored in Mysql",
         "text": "step4.md"
       },
       {
-        "title": "Step 5 - Introduction on Grafana Dashboard and Panel",
+        "title": "Step 5 - Example of missue/attacks/threats that can detect using the log data",
         "text": "step5.md"
       },
       {
-        "title": "Step 6 - Introduction on Grafana Alert",
+        "title": "Step 6 - Introduction on Grafana Dashboard and Panel",
         "text": "step6.md"
       },
       {
-        "title": "Step 7 - Introduction on Grafana Notification Channel",
+        "title": "Step 7 - Introduction on Grafana Alert",
         "text": "step7.md"
       },
       {
-        "title": "Step 8 - Introduction on Grafana reporter",
+        "title": "Step 8 - Introduction on Grafana Notification Channel",
         "text": "step8.md"
+      },
+      {
+        "title": "Step 9 - Introduction on Grafana reporter",
+        "text": "step9.md"
       }
     ],
     "intro": {

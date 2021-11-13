@@ -1,66 +1,118 @@
 
 
-In the last step, we have configurated Grafana, Mysql, and Wordpress's log setting.
-In this Step, we will learn different log table stored in the Mysql database.
+In the last step, we have learn how to create a grafana container.
+In this Step, we will learn how to configurate Grafana, Mysql, and Wordpress's log setting.
 
-# Table1 : general_log
-"general_log" is a table in "Mysql" database, it stores all of the general record of what mysqld is doing. It writes information of client connect or disconect, query request from clients.
+# 1. Configuration on wordpress
 
-There are six column in the general log table
-* `event_time` - It is the time of when the connection / query request has made.
-* `user_host` - It is the username and the host of the client requested.
-* `thread_id` - It is a client id of your current process session
-* `server_id` - It is the server id that 
-* `comand_type` - It is the type of command made by the user, There are 5 type of command type: Connect, Query, Quit, Init DB, Field List.
-* `argument` - The original command is covert into hex number and stored in the table. 
-You may use `convert(argument using utf8)` to convert it back to readable query.
+Please select wordpress tab in the terminal to open the wordpress website.
 
-you may login to the mysql container to check the above table:
+After login to the wordpress with your account, you will be navigate to the main page of you wordpress.
+
+In the action bar, please select Plugin and then install plugin.
+
+![wordpress_1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step2/wordpress_plugin.PNG?raw=true)
+
+In this page, you are able to find all plugin provided by the wordpress.
+You may search log in the search bar to find out all logging plugins.
+In this case, we will teach you how to configurate the `Simple History` Plugin
+
+![wordpress_2](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step2/wordpress_plugin_select.PNG?raw=true)
+
+After install the plugin, you can check all of your activity log in the Simple History tab.
+The further steps will teach you how to create a more integrated dashboard in grafana to visualize all of your log stored in mysql database.
+
+![wordpress_3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step2/wordpress_simpleHistory.PNG?raw=true)
+
+
+
+# 2. Configuration on mysql
+
+In order to enable the general_log in mysql database, you have to follow the following command.
+
+Go to terminal:
+
+Start your mysql container by :
 
 `docker exec -it mysql bash`{{execute}}
 
-Also, login to the mysql database with a admin account
-`mysql -u {your mysql username} -p`
+After that, you have to add the following configuration in the my.cnf file in folder etc/mysql by few commands:
 
-`{your password}`
+`cat -> etc/my.cnf`{{execute}}
 
-The query will only output first 10 record in the table by limit 10 option, you may delete it and get all of the query in the general log table.
-`SELECT * FROM mysql.general_log limit 10;`{{execute}}
+`[mysqld]
+general_log = 1
+log_output = table`{{execute}}
+
+after that please click `ctrl + D` in your keyboard to stop editing the my.cnf file.
+
+You can check whether your setting have been write into the file by:
+
+`cat etc/my.cnf`{{execute}}
+
+If you cannot see the expected output like this, it means that you have not edit the file correctly. <br />
+`[mysqld]
+general_log = 1
+log_output = table`
+
+After that restart the container and check whether the log has succesfull enabled
+`exit`{{execute}}
+
+`docker restart mysql`{{execute}}
+
+`docker exec -it mysql bash`{{execute}}
+
+Also, login to the mysql database with a admin account or the root account.
+`mysql -u root -p`{{execute}}
+
+`{root password}`
+Hint: the password is set in Step 0 of this scenario.
+
+Check that whether general_log is enabled.
+`SHOW global variables like 'general_log%';`{{execute}}
+`SHOW global variables like 'log_output%';`{{execute}}
+
+You should also create an account for Grafana.
+
+`CREATE USER 'Grafana'@'%' IDENTIFIED BY '12345'; `{{execute}}
+
+The accout should have have select permission on three table, which is mysql.general_log, wordpress.wp_simple_history, wordpress.wp_simple_history_contexts. The function of three table will be explained in the next step.
+`GRANT SELECT ON mysql.general_log TO 'Grafana'@'%';`{{execute}}
+`GRANT SELECT ON wordpress.wp_simple_history TO 'Grafana'@'%';`{{execute}}
+`GRANT SELECT ON wordpress.wp_simple_history_contexts TO 'Grafana'@'%';`{{execute}}
+
+Check that whether the user have select permission.
+`SHOW GRANTS FOR 'Grafana'@'%';`{{execute}}
+
+# 3. Configuration on grafana
+
+In order to get data from database, we have to setup datasource in grafana webpage.
+
+Please first select datasource in the main page.
+
+![datasource_1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step2/main_addDatasource.png?raw=true)
+
+After that search mysql and select it as new datasource.
+
+![datasource_2](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step2/datasource_sql.PNG?raw=true)
+
+Please enter the following configuration into the setup.
+
+* `Host` - mysql container name (e.g. mysql-server)
+* `Database` - database name (e.g. mysql / wordpress)
+* `User` - your admin user account 
+Note: please enter a user account which have permission on select data from the sepcified database
+* `Password` - your admin user password
+* `Others` - you may also enter other configuration 
+
+You should click Save & test and check whether Database Conection OK
+
+![datasource_3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step2/datasource_detail.PNG?raw=true)
 
 
-# Table2: wp_simple_history
-"wp_simple_history" is a table in "wordpress" database, it stores some simple log occur in wordpress website such as what plugin has been installed.
-It is useful for you to manage your wordpress website and trace the change of the website.
-
-`Note: this table is created after install the "Simple History" plugin in the wordpress, if you cannot find this table, please return to the last step and following the configuration on Wordpress.`
-
-There are seven column in the wp_simple_history table.
-* `id` - It is the index of the log recorded.
-* `date` - It is the time of when the log has made. 
-* `logger` - It is type of logger of the record. There are two type of logger: SimplePluginLogger and SimpleLogger. SimpleLogger is some information from the plugin.
-* `level` - It is the type of log.
-* `message` - It is the message of the log.
-* `occasionsID` - It is like the user id of log made.
-* `initiator` - It state that whether the change is made by wp_user or by wordpress server.
-
-You may use this command to check content of the above table;
-`SELECT * FROM wordpress.wp_simple_history;`{{execute}}
+You should make new datasource from mysql if the database is different
+In the following Steps, we also need to use datasource from wordpress database.
+You may skip this configuration first but you have to remember to create the datasource for wordpress database.
 
 
-# Table3: wp_simple_histpory_contexts
-"wp_simple_histpory_contexts" is a table in "wordpress" database, it stores all of the general log occur in wordpress website such as what plugin has been installed, tranaction maded, user profile modified, or the log in/ log out time.
-
-`Note: this table is created after install the "Simple History" plugin in the wordpress, if you cannot find this table, please return to the last step and following the configuration on Wordpress.`
-
-There are four column in the wp_simple_history table.
-* `context_id` - It is the index of the row of log.
-* `history_id` - It is the index of each log, different row in the table have the same hisotry_id is belonging to the same log record.
-* `key` - It is the key of each log record. There are different type of key for different type of log record. For example, Each log in log record may have _user_id, _user_login, _user_email three type of key. 
-* `value` - It is the value according to the key in last column.
-
-As mentions, different row of this table may belongs to the same log record.
-
-You may use this command to check content of the above table;
-`SELECT * FROM wordpress.wp_simple_history_contexts;`{{execute}}
-
-Congulations! you have enough knowlege on different log table stored in the Mysql database.
+Congulations! you have successfully setup your log configuration on grafana, mysql and wordpress.

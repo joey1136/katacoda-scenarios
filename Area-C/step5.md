@@ -1,117 +1,81 @@
 
 
-In the last step, we have learnt different log table stored in the Mysql database.
-In this step, we will learn how to create dashboard in Grafana using those log data.
+In the last step, we have learn different log table stored in the Mysql database.
+In this Step, we will learn examples of missue/attacks/threats that will be logged.
 
-# Introduction to Grafana Dashboard & Panel
+# Scenario 1. Someone hacking your wordpress by guessing your account password. (External)
 
-In the Grafana, you can create a new dashboard in the left navigation bar or on main page.
+This is an example log on the Wordpress database.
+The way to determine whether the log is a login failed log is to check the message column, if message column contain "Failed to login", we can know that it is a login failed log. If failure continute for long time / many times. You may know that someone is hacking your account.
 
-![dashboard_1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step5/main_dashboard.png?raw=true)
+You may try to query by:
+`SELECT * from wordpress.wp_simple_history where level = 'warning';`{{execute}}
 
-In your dashboard, you can create a panel or a row.
+![missue1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step4/login_fail_MySQLexample.PNG?raw=true)
 
-![dashboard_2](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step5/dashboard_1.PNG?raw=true)
+You may learn how to summarize the login fail in panel in the next step.
 
-You may also change the time interval of the log data such as Last 5 minutes, Last 15 minutes after creating the panels.
+# Scenario 2. Someone DDos on your website. (External)
 
-![dashboard_time](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step5/dashboard_time%20range.PNG?raw=true)
+This is an example log on the Wordpress database.
+You may search the value column of the table `wp_simple_history_contexts` and find out all records made in specific ip address.
 
-You may also export your dashboard into JSON format clicking the share button in the top of the dashboard.
+For example, you can search all ip requested in the log table
+`SELECT value from wordpress.wp_simple_history_contexts where wordpress.wp_simple_history_contexts.key = "_server_remote_addr";`{{execute}}
 
-![dashboard_export](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step5/dashboard_export.PNG?raw=true)
+And you may s elect all record in specific ip "172.17.0.0" by the following query:
+`SELECT * from wordpress.wp_simple_history_contexts where value = '172.17.0.0';`{{execute}}
 
-If you select "Add an empty Panel"
-You will be redirect to a edit page.
+Also, you may count the number of record made:
+`SELECT count(*) from wordpress.wp_simple_history_contexts where value = '172.17.0.0';`{{execute}}
 
-![dashboard_3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step5/panel_1.PNG?raw=true)
+![missue2](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step4/missue2.PNG?raw=true)
 
-There is six main session in this page you need to know:
+you may also find out the execute time of the specific records:
+`SELECT * from wordpress.wp_simple_history where id = 'please input the id here';`
 
-* `visualized panel (lime)` - this is the review of your panel, you may change it into table view to check whether what data you get from the query.
-* `panel type (green)` - you can select the type of this panel. 
-* `Control panel (yellow)` - you may select Query, Transform, Alert in this panel.
-* `Datasource (pink)` - you may change the datasource of you query. In our case, we have two main datasource which is Mysql and Wordpress Database.
-![dashboard_4](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step5/fail_choose%20datasource.PNG?raw=true)
-* `Query Session (red)` - you may change your query in this session, you can click "Edit SQL" and change it into a sql input.
-* `Panel Option (skyblue)` - you may change the detail of your panel in this session, for example Panel title, axis name, etc..
+you may also find out the execute time of the all records:
+`SELECT * from wordpress.wp_simple_history where id IN (select history_id from wordpress.wp_simple_history_contexts where value = '172.17.0.0');`{{execute}}
 
+![missue2_1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step4/missue2_1.PNG?raw=true)
 
-# Example on creating user failed login time series graph (Scenario 1)
+You may learn how to summarize the ip record in panel in the next step.
 
-Grafana's panel can centralized and visualized your log data in a human-friendly way.
-This example will teach you how to create a time series graph.
-You may go back to step4 - Scenario 1 to have a look on the example log in the log table.
+# Scenario 3. Someone in your company changed your wordpress settings/transaction records. (Internal)
 
-In our "Query Session", we can insert our query and check the query output in "visualized panel".
+This is an example log on the Wordpress database.
+You may search the value column of the table `wp_simple_history_contexts` and find out all records.
 
-In the time series panel, it need a time and a number of record in that time.
-Our SQL statement is like this <br />
+For example, you may select all `user_created` record by the following query:
+`SELECT history_id from wordpress.wp_simple_history_contexts where value='user_created';`{{execute}}
 
-`SELECT 
-  __timeGroupAlias(date,1m),
-  count(*) AS "number"
-FROM wp_simple_history 
-WHERE
-  __timeFilter(date) 
-AND message LIKE 'Failed to login%'
-GROUP BY 1
-ORDER BY $__timeGroup(date,1m)`
+Then, you can search those record having that id:
+`SELECT * from wordpress.wp_simple_history_contexts where history_id='please input the id here';`
+And the execute time of that record:
+`SELECT * from wordpress.wp_simple_history where id='please input the id here';`
 
+Alternatively, you may combine the query as:
 
-* `$__timeGroupAlias(date,1m)` - it use the 'date' column in the table and separate it into 1 minutes interval, you may change the time interval such as 1h.
-* `count(*) AS 'number'` - it count the number of row which fulfill the query.
-* `FROM wp_simple_history` - it state the table "wp_simple_history" of the query.
-* `AND message LIKE "Failed to login%"` - it is a statement state that we only want to query log if it is login failed.
-* `ORDER BY $__timeGroup(date,1m)` - you should also change the last line if you want to change the time interval in the second line.
-`Note: Other query setting in this statement expect the above five cannot changed due to the panel setting, otherwize the panel will not show correctly.`
+`SELECT * from wordpress.wp_simple_history_contexts where (SELECT history_id from wordpress.wp_simple_history_contexts where value = 'user_created') = history_id;`{{execute}}
 
-The graph will be like this:
-if `Data does not have a time field` is displayed, you may have no data fulfilling your query. Please check by query it in mysql container.
+`SELECT * from wordpress.wp_simple_history where (SELECT history_id from wordpress.wp_simple_history_contexts where value = 'user_created') = id;`{{execute}}
 
-![graph1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step5/login_fail_grafana.PNG?raw=true)
+![missue3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step4/missue3.PNG?raw=true)
 
-# Example on creating log count by ip bar chart (Scenario 2)
+You may learn how to summarize the setting changed in panel in the next step.
 
-This example will teach you how to create a bar chart.
+# scenario 4. Someone (unauthorized) login to the mysql and stole the personal informations of customer. (Internal/External)
 
-In the bar chart, it need a specific name and a number of record of that specific name.
-Our SQL statement is like this <br />
+This is an example log on the Mysql database.
+There is a record for each query with command_type = query. Also, there is a log time,useraccount and the host address which created this query request. 
+* You can know that maybe someone outside has stole your database records if there are large amount of query made in a non-authorized host address. 
+* You may also know that if somebody in your company using the company's computer to stole the personal information stored in the database and sold it out.
 
-`SELECT
-  l1.value, 
-  count(*) as "number"
-from (wordpress.wp_simple_history_contexts l1 INNER JOIN wordpress.wp_simple_history l2 ON l1.history_id = l2.id)
-WHERE $__timeFilter(l2.date) 
-AND l1.key = "_server_remote_addr" 
-GROUP BY l1.value 
-ORDER BY count(*) desc;
-  
+You may try to query by:
+`SELECT event_time,user_host,convert(argument using utf8) from mysql.general_log limit 10;`{{execute}}
 
-Explaination on the SQL statement:
-* we have two table which is wp_simple_history_contexts and wp_simple_history, we name it as l1 and l2.
-* we would like to use the inner join statement to join two table together, the joined table would like this:
-![graph2_1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step5/ip_graph_innerjoin.PNG?raw=true)
+![missue4](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step4/missue4.PNG?raw=true)
 
-If you want to create another Bar chart, you must need the following: <br />
+You may learn how to summarize number of query in panel in the next step.
 
-`SELECT 
-  "name" 
-  count(*) as "number" 
-From "TABLE"
-WHERE $__timeFilter("your time column")
-GROUP BY "name" 
-ORDER BY count(*) desc;`
-
-Also, It is also a must configuration for bar chart:
-you have to change format from timeseries to table in the query input part.
-
-![graph2_2](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step5/ip_graph_table.PNG?raw=true)
-
-The graph will be like this:
-
-![graph2_3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step5/ip_graph.PNG?raw=true)
-
-Exercies: you may try to create another two scenario into panel.
-Congulations! you have basic knowlege on how to create a dashboard and different panels to prevent missue/attacks/threats scenarios.
-
+Congulations! you have basic knowlege on missue/attacks/threats scenarios.

@@ -1,33 +1,47 @@
 
 
-In our first step, we will learn how to create a grafana container.
+# Start up the MYSQL Container
 
-In order to create a grafana container.First, pull the grafana official docker iamge.
+First, we should start up a MYSQL database for storing the data in WordPress. We will make use of the official docker image `mysql:8` in the Docker hub.
 
-`docker pull grafana/grafana:latest`{{execute}}
+Create a docker network for communication between MySQL and WordPress containers.
 
-`docker run --name grafana --network=wordpress-network -p 3000:3000 -d grafana/grafana:latest`{{execute}}
+`docker network create wordpress-network`{{execute}}
 
-* `--name grafana` means that you name the container as "grafana"
-* `--network=wordpress-network` means that you have to link the container into a network called "root_default"
-* `-p 3000:3000` means that you can access the container in port 3000
-* `grafana/grafana:latest` is the docker image you have to use
+Startup a container mysql in the background.
 
-Check the `grafana/grafana` container is runnning.
+`docker run --name mysql -d -e MYSQL_ROOT_PASSWORD=12345 -e MYSQL_DATABASE=wordpress -e MYSQL_USER=wordpress -e MYSQL_PASSWORD=12345 --network=wordpress-network mysql:8`{{execute}}
+
+The following the command/environment variables explanation:
+- -d option: Container run in daemon mode/in the background
+- MYSQL_ROOT_PASSWORD: Initialize the root's password in the MySQL database.
+- MYSQL_DATABASE: Create a database with the specified name.
+- MYSQL_USER and MYSQL_PASSWORD: Create a user with the specified password. This user will be granted the superuser permissions for the database specified by the MYSQL_DATABASE variable.
+
+Check the `mysql/mysql-server` container is runnning.
 
 `docker ps`{{execute}}
 
-After that, Please click tab Grafana in the terminal
+# Start up the WordPress container
 
-In the Grafana page login as 
-User: `admin`
-Password: `admin`
+First, pull the WordPress official docker iamge.
 
-![login_page](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step1/grafana_login_page.PNG?raw=true)
+`docker pull wordpress`{{execute}}
 
-After that the website will ask you to change the password.
-Please change your password into a secure password to prevent data breach.
+After finishing the pull of Wordpress. Start the WordPress container.
 
-![change_password](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step1/grafana_changePassword.PNG?raw=true)
+`docker run -e WORDPRESS_DB_USER=wordpress -e WORDPRESS_DB_PASSWORD=12345 -e WORDPRESS_DB_HOST=mysql:3306 --name wordpress --network=wordpress-network -p 10080:80 -d wordpress`{{execute}}
 
-Congulations! you have successfully create you grafana container
+The following the command/environment variables explanation:
+- -d option: Container run in daemon mode/in the background
+- WORDPRESS_DB_HOST=mysql:3306: Specify the hostname (mysql) and the port (3306) of the database server for wordpress to store the data.
+- WORDPRESS_DB_USER: Set the mysql database user name.
+- WORDPRESS_DB_PASSWORD: Set the mysql database password.
+- –-name wordpress: Set the container's name.
+- --network=wordpress-network: Connect the wordpress container to the specified docker network.
+- -p 10080:80: Tells Docker to pass connections from your host's port 10080 to the containers internal port 80.
+- wordpress: The name of the image to be run.
+
+Check that the WordPress container is running.
+
+`docker ps`{{execute}}
