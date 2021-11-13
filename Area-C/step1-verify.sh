@@ -1,9 +1,8 @@
 #!/bin/bash
 
-docker network ls | grep -c "wordpress-network"
+docker ps | grep -c "grafana"
 
 if [[ $? -eq 0 ]]
   then 
     echo "done"
   fi
-
