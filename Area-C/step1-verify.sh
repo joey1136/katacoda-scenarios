@@ -1,2 +1,23 @@
-[docker network ls | grep -c "wordpress-network" ] && [docker ps | grep -c "mysql"] && [docker images | grep -c "wordpress"] && [docker ps | grep -c "wordpress"]  && echo "done"
+docker network ls | grep -c "wordpress-network"
+
+if [[ $? -eq 0 ]]
+  then 
+    docker ps | grep -c "mysql"
+
+    if [[ $? -eq 0 ]]
+    then 
+        docker images | grep -c "wordpress"
+
+        if [[ $? -eq 0 ]]
+        then 
+            docker ps | grep -c "wordpress"
+
+            if [[ $? -eq 0 ]]
+            then 
+                echo "done"
+            fi
+
+        fi
+    fi
+  fi
 
