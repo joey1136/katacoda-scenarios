@@ -66,6 +66,7 @@ ORDER BY $__timeGroup(date,1m)
 * `ORDER BY $__timeGroup(date,1m)` - you should also change the last line if you want to change the time interval in the second line.
 `Note: Other query setting in this statement expect the above five cannot changed due to the panel setting, otherwize the panel will not show correctly.`
 
+The graph will be like this:
 if `Data does not have a time field` is displayed, you may have no data fulfilling your query. Please check by query it in mysql container.
 
 ![graph1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step5/login_fail_grafana.PNG?raw=true)
@@ -110,7 +111,7 @@ you have to change format from timeseries to table in the query input part.
 
 ![graph2_2](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step5/ip_graph_table.PNG?raw=true)
 
-The output of the graph will be like this:
+The graph will be like this:
 
 ![graph2_3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step5/ip_graph.PNG?raw=true)
 
