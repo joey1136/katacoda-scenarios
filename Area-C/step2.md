@@ -1,3 +1,8 @@
+
+
+In the last step, we have learn how to create a grafana container.
+In this Step, we will learn how to configurate Grafana, Mysql, and Wordpress's log setting.
+
 # 1. Configuration on grafana
 
 In order to get data from database, we have to setup datasource in grafana webpage.

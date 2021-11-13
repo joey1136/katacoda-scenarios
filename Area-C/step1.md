@@ -1,3 +1,7 @@
+
+
+In our first step, we will learn how to create a grafana container.
+
 In order to create a grafana container, you have to run to above command:
 
 `docker run --name grafana --network=root_default -p 3000:3000 -d grafana/grafana:latest`{{execute}}

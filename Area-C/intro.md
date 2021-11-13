@@ -8,5 +8,6 @@ As a website administrator, you have to learn how to deploy Grafana environment 
 - Walkthrough the setup Grafana environment
 - Configuration between Grafana, Mysql, Wordpress
 - Introduction on log data collected
-- Introduction on Grafana Dashboard
-- Introduction on Grafana alerting system and SMTP setup
+- Introduction on how you can use your log data to prevent missue/attacks/threats scenarios
+- Introduction on Grafana Dashboard and creating panel
+- Introduction on Grafana alerting system and notification

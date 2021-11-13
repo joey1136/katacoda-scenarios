@@ -18,16 +18,20 @@
         "text": "step3.md"
       },
       {
-        "title": "Step 4 - Introduction on Grafana Dashboard and Panel",
+        "title": "Step 4 - Example of missue/attacks/threats that can detect using the log data",
         "text": "step4.md"
       },
       {
-        "title": "Step 5",
+        "title": "Step 5 - Introduction on Grafana Dashboard and Panel",
         "text": "step5.md"
       },
       {
-        "title": "Step 6",
+        "title": "Step 6 - Introduction on Grafana Alert",
         "text": "step6.md"
+      },
+      {
+        "title": "Step 7 - Introduction on Grafana Notification Channel",
+        "text": "step7.md"
       }
     ],
     "intro": {
