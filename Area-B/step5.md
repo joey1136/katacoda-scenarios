@@ -7,11 +7,12 @@ The purpose of the backup is to create a copy of data that can be recovered in t
 
 `wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.16-1_all.deb`{{execute}}
 
-`sudo dpkg -i mysql-apt-config_0.8.16-1_all.deb`{{execute}}
-
 `sudo apt-get update`{{execute}}
 
 `sudo apt-get install mysql-server`{{execute}}
+"Do you want to continue?",input "Y" in your command.
+
+Back up mysql database and store the sql file in the current directory.
 
 `mysqldump -u root -p mysql >./backup.sql`{{execute}}
 

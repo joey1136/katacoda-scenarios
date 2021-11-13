@@ -46,6 +46,15 @@ Check the user list,you can find the subscriber "jason".
 
 `select * from wp_users;`{{execute}}
 
+Exit mysql connection.
+`exit;`{{execute}}
+
+Exit shell.
+`exit;`{{execute}}
+
+
+
+
 
 
 
