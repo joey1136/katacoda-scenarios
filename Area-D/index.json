@@ -6,6 +6,10 @@
   "details": {
     "steps": [
       {
+        "title": "Preparation",
+        "text": "step0.md"
+      },
+      {
         "title": "The right of access",
         "text": "step1.md"
       },
