@@ -1,21 +1,41 @@
 {
-  "title": "New Scenario Template",
-  "description": "A simple scenario example.",
+  "title": "Various data subjects rights and consent management in GDPR",
+  "description": "",
   "difficulty": "Beginner",
-  "time": "3 minutes",
+  "time": "120 minutes",
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "The right of access",
         "text": "step1.md"
       },
       {
-        "title": "Step 2",
+        "title": "The right to rectification",
         "text": "step2.md"
       },
       {
-        "title": "Step 3",
+        "title": "The right to erasure",
         "text": "step3.md"
+      },
+      {
+        "title": "The right to restrict processing",
+        "text": "step4.md"
+      },
+      {
+        "title": "The right to data portability",
+        "text": "step5.md"
+      },
+      {
+        "title": "The right to object",
+        "text": "step6.md"
+      },
+      {
+        "title": "The right not to be subject to a decision based solely on automated processing",
+        "text": "step7.md"
+      },
+      {
+        "title": "Consent Management",
+        "text": "step8.md"
       }
     ],
     "intro": {
