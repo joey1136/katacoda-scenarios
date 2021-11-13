@@ -68,3 +68,6 @@ After save, you may see that you panel have been successfully setup in the dashb
 You may also export your dashboard into JSON format clicking the share button in the top of the dashboard.
 
 ![graph1_3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/dashboard_export.PNG?raw=true)
+
+
+Congulations! you have basic knowlege on how to create a dashboard and different panels to prevent missue/attacks/threats scenarios.
