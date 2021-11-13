@@ -6,6 +6,10 @@
   "details": {
     "steps": [
       {
+        "title": "Step 0 - Prepare your mysql and wordpress container",
+        "text": "step0.md"
+      },
+      {
         "title": "Step 1 - Create your first grafana container",
         "text": "step1.md"
       },
