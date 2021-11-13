@@ -3,38 +3,7 @@
 In the last step, we have learn how to create a grafana container.
 In this Step, we will learn how to configurate Grafana, Mysql, and Wordpress's log setting.
 
-# 1. Configuration on grafana
-
-In order to get data from database, we have to setup datasource in grafana webpage.
-
-Please first select datasource in the main page.
-
-![datasource_1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/main_addDatasource.png?raw=true)
-
-After that search mysql and select it as new datasource.
-
-![datasource_2](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/datasource_sql.PNG?raw=true)
-
-Please enter the following configuration into the setup.
-
-* `Host` - mysql container name (e.g. mysql-server)
-* `Database` - database name (e.g. mysql / wordpress)
-* `User` - your admin user account 
-Note: please enter a user account which have permission on select data from the sepcified database
-* `Password` - your admin user password
-* `Others` - you may also enter other configuration 
-
-You should click Save & test and check whether Database Conection OK
-
-![datasource_3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/datasource_detail.PNG?raw=true)
-
-
-You should make new datasource from mysql if the database is different
-In the following Steps, we also need to use datasource from wordpress database.
-You may skip this configuration first but you have to remember to create the datasource for wordpress database.
-
-
-# 2. Configuration on wordpress
+# 1. Configuration on wordpress
 
 Please select wordpress tab in the terminal to open the wordpress website.
 
@@ -57,7 +26,7 @@ The further steps will teach you how to create a more integrated dashboard in gr
 
 
 
-# 3. Configuration on mysql
+# 2. Configuration on mysql
 
 In order to enable the general_log in mysql database, you have to follow the following command.
 
@@ -106,5 +75,36 @@ The accoutn should have have select permission on three table, which is mysql.ge
 
 Check that whether the user have select permission.
 `SHOW GRANTS FOR 'Grafana'@'%';`{{execute}}
+
+# 3. Configuration on grafana
+
+In order to get data from database, we have to setup datasource in grafana webpage.
+
+Please first select datasource in the main page.
+
+![datasource_1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/main_addDatasource.png?raw=true)
+
+After that search mysql and select it as new datasource.
+
+![datasource_2](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/datasource_sql.PNG?raw=true)
+
+Please enter the following configuration into the setup.
+
+* `Host` - mysql container name (e.g. mysql-server)
+* `Database` - database name (e.g. mysql / wordpress)
+* `User` - your admin user account 
+Note: please enter a user account which have permission on select data from the sepcified database
+* `Password` - your admin user password
+* `Others` - you may also enter other configuration 
+
+You should click Save & test and check whether Database Conection OK
+
+![datasource_3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/datasource_detail.PNG?raw=true)
+
+
+You should make new datasource from mysql if the database is different
+In the following Steps, we also need to use datasource from wordpress database.
+You may skip this configuration first but you have to remember to create the datasource for wordpress database.
+
 
 Congulations! you have successfully setup your log configuration on grafana, mysql and wordpress.
