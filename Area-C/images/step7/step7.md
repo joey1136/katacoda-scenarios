@@ -49,35 +49,35 @@ After that restart the grafana container to enable the settings.
 Please go to alerting page in the Grafana Page and setup your notication channel:
 You may then Test your connection in this page.
 
-![alert](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/alert_3.PNG?raw=true)
+![alert](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step7/alert_3.PNG?raw=true)
 
 # Create notification in Slack
 
 In your Slack Group, create a new channel in the left navigation bar. You may name it as alerting.
 
-![slack_1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/slack_1.PNG?raw=true)
-![slack_2](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/slack_2.PNG?raw=true)
+![slack_1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step7/slack_1.PNG?raw=true)
+![slack_2](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step7/slack_2.PNG?raw=true)
 
 Then add an Apps into the channel setting.
 
-![slack_3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/slack_3.PNG?raw=true)
+![slack_3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step7/slack_3.PNG?raw=true)
 
 Install Incoming WebHooks to send the grafana alert into the channel
 
-![slack_4](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/slack_4.PNG?raw=true)
+![slack_4](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step7/slack_4.PNG?raw=true)
 
 Select your new channel "alert" and add incoming webhooks integration.
 
-![slack_5](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/slack_5.PNG?raw=true)
+![slack_5](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step7/slack_5.PNG?raw=true)
 
 After that, copy the webhook URL and configure notification channel in Grafana.
 
-![slack_6](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/slack_6.PNG?raw=true)
-![slack_7](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/slack_7.PNG?raw=true)
+![slack_6](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step7/slack_6.PNG?raw=true)
+![slack_7](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step7/slack_7.PNG?raw=true)
 
 Congurations. You can successfully received alert from grafana in your channel now.
 
-![slack_8](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/slack_8.PNG?raw=true)
+![slack_8](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step7/slack_8.PNG?raw=true)
 
 
 You may explore more in the Grafana Official Webpage

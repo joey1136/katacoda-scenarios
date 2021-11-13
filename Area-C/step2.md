@@ -11,18 +11,18 @@ After login to the wordpress with your account, you will be navigate to the main
 
 In the action bar, please select Plugin and then install plugin.
 
-![wordpress_1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/wordpress_plugin.PNG?raw=true)
+![wordpress_1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step2/wordpress_plugin.PNG?raw=true)
 
 In this page, you are able to find all plugin provided by the wordpress.
 You may search log in the search bar to find out all logging plugins.
 In this case, we will teach you how to configurate the `Simple History` Plugin
 
-![wordpress_2](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/wordpress_plugin_select.PNG?raw=true)
+![wordpress_2](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step2/wordpress_plugin_select.PNG?raw=true)
 
 After install the plugin, you can check all of your activity log in the Simple History tab.
 The further steps will teach you how to create a more integrated dashboard in grafana to visualize all of your log stored in mysql database.
 
-![wordpress_3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/wordpress_simpleHistory.PNG?raw=true)
+![wordpress_3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step2/wordpress_simpleHistory.PNG?raw=true)
 
 
 
@@ -82,11 +82,11 @@ In order to get data from database, we have to setup datasource in grafana webpa
 
 Please first select datasource in the main page.
 
-![datasource_1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/main_addDatasource.png?raw=true)
+![datasource_1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step2/main_addDatasource.png?raw=true)
 
 After that search mysql and select it as new datasource.
 
-![datasource_2](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/datasource_sql.PNG?raw=true)
+![datasource_2](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step2/datasource_sql.PNG?raw=true)
 
 Please enter the following configuration into the setup.
 
@@ -99,7 +99,7 @@ Note: please enter a user account which have permission on select data from the 
 
 You should click Save & test and check whether Database Conection OK
 
-![datasource_3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/datasource_detail.PNG?raw=true)
+![datasource_3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step2/datasource_detail.PNG?raw=true)
 
 
 You should make new datasource from mysql if the database is different
