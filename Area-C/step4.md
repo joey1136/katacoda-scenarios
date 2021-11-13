@@ -37,7 +37,7 @@ This example will teach you how to create a time series graph.
 This is an example log on the Wordpress database.
 The way to determine whether the log is a login failed log is to check the message column, if message column contain "Failed to login", we can know that it is a login failed log.
 
-![graph_1]()
+![graph_1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/login_fail_MySQLexample.PNG?raw=true)
 
 In our "Query Session", we can insert our query and check the query output in "visualized panel".
 

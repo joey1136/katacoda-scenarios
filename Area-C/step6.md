@@ -2,6 +2,8 @@
 
 In the last step, we have learnt how to create a alert in your panel.
 In this step, we will learn how to create notification when alerting.
+Alert notification is import when error or attacks happen, you can receive immediate notification within email or messaging applications. For example, you can know that when someone hacking in your wordpress website as there are multiple failure login and you can take action on it immediately.
+
 
 # Create notification in Email (Cannot configure in Katacoda environment)
 `For your reference, the Katacoda (this learning Platform) did not provide smtp connection. You can create notification through Email but you cannot test in this scenario. You may try it in your own linux machine.`
