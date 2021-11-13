@@ -13,6 +13,14 @@ In your dashboard, you can create a panel or a row.
 
 ![dashboard_2](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step5/dashboard_1.PNG?raw=true)
 
+You may also change the time interval of the log data such as Last 5 minutes, Last 15 minutes after creating the panels.
+
+![dashboard_time](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step5/dashboard_time%20range.PNG?raw=true)
+
+You may also export your dashboard into JSON format clicking the share button in the top of the dashboard.
+
+![dashboard_export](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step5/dashboard_export.PNG?raw=true)
+
 If you select "Add an empty Panel"
 You will be redirect to a edit page.
 
@@ -102,22 +110,5 @@ you have to change format from timeseries to table in the query input part.
 The output of the graph will be like this:
 
 ![graph2_3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step5/ip_graph_innerjoin.PNG?raw=true)
-
-
-
-
-
-
-
-
-
-
-After creating panels, you may see that you panel have been successfully setup in the dashboard, you can change the time interval of the log data such as Last 5 minutes, Last 15 minutes.
-
-![dashboard_time](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step5/dashboard_time%20range.PNG?raw=true)
-
-You may also export your dashboard into JSON format clicking the share button in the top of the dashboard.
-
-![dashboard_export](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-C/images/step5/dashboard_export.PNG?raw=true)
 
 Congulations! you have basic knowlege on how to create a dashboard and different panels to prevent missue/attacks/threats scenarios.
