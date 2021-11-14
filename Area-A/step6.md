@@ -19,9 +19,9 @@ Enter the password as `12345`.
 
 Check what permissions of the root account;
 
-`show database`{{execute}}
+`show database;`{{execute}}
 
-`show grants`{{execute}}
+`show grants;`{{execute}}
 
 You will find that the root account can enter different databases and grant all the privileges.
 
