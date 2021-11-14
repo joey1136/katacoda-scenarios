@@ -7,7 +7,8 @@
     "steps": [
       {
         "title": "Preparation",
-        "text": "step0.md"
+        "text": "step0.md",
+        "verify": "step0-verify.sh"
       },
       {
         "title": "The right of access",
