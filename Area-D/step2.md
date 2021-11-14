@@ -14,10 +14,18 @@ Order datails like Billing Details or shipping address can be edited.
 
 ![Edit_Order_Detail](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step2/EditOrderDetail.png?raw=true)
 
-## Edit Personal Data
+## Edit Personal Data (Admin)
 
 When user found their information in their profile is inaccurate, they can contact the admin for data rectification.
 
 Navigate to `Users > All Users`. When the mouse is over a user, a "Edit" button will appear.
 
 ![Edit_Personal](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step2/DeleteUser.png?raw=true)
+
+## Edit Personal Data (User)
+
+When user found their information in their profile is inaccurate, they can also edit the information by themselves.
+
+Navigate to `Profile`.
+
+![Edit_User](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step2/EditUser_User.png?raw=true)
