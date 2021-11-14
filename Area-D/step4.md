@@ -5,7 +5,7 @@ The data subject shall have the right to obtain from the controller restriction 
 - the processing is unlawful and the data subject opposes the erasure of the personal data and requests the restriction of their use instead;
 - the controller no longer needs the personal data for the purposes of the processing, but they are required by the data subject for the establishment, exercise or defence of legal claims;
 
-# Consent management
+## Consent management
 Consent management is the act or process of managing consents from your users and customers for processing their personal data.
 
 A proper consent management system encompasses the following:
@@ -14,3 +14,8 @@ A proper consent management system encompasses the following:
 - Securely storing all consents as documentation that the consent has been obtained.
 - Giving your users access to withdraw their consent at any time.
 - Consent must be renewed annually. However, some national data protection guidelines recommend more frequent renewal, e.g. 6 months. Check your local data protection guidelines for compliance
+
+## Plugin Installation to Obtain Consent
+
+Navigate to `Plugins`, click on [add new] button and search for "GDPR Cookie Compliance (CCPA ready)":
+![Cookie1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step4/Cookie1.png?raw=true)
