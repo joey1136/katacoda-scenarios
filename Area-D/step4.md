@@ -21,7 +21,7 @@ Navigate to `Plugins`, click on [add new] button and search for "GDPR Cookie Com
 
 ![Cookie1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step4/Cookie1.png?raw=true)
 
-After installation and activation, "GDPR Cookie Compliance" menu will appear on Dashboard left sidebar. Setting about consent management can be adjusted here.
+After installation and activation, `GDPR Cookie Compliance` menu will appear on Dashboard left sidebar. Setting about consent management can be adjusted here.
 
 ![Cookie3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step4/Cookie3.png?raw=true)
 
