@@ -10,3 +10,4 @@ The official PDF of the Regulation (EU) 2016/679 (General Data Protection Regula
 - The right to data portability
 - The right to object
 - The right not to be subject to a decision based solely on automated processing
+- Consent management
