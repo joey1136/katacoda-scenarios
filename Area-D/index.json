@@ -44,14 +44,15 @@
       }
     ],
     "intro": {
-      "text": "intro.md",
-      "code": "foreground.sh"
+      "text": "intro.md"
     },
     "finish": {
       "text": "finish.md"
     }
   },
   "environment": {
+    "showdashboard": true,
+    "dashboards": [{"name": "Workpress", "port": 10080}],
     "uilayout": "terminal"
   },
   "backend": {
