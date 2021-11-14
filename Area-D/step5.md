@@ -27,6 +27,6 @@ The personal data of the users is showed. You may click the [Export] button to e
 
 ![php4](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step5/php4.png?raw=true)
 
-Click the go button to download the result.
+Click the [Go] button to download the result.
 
 ![php5](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step5/php5.png?raw=true)
