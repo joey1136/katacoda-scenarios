@@ -4,3 +4,9 @@ The data subject shall have the right to obtain from the controller the erasure 
 - the personal data are no longer necessary in relation to the purposes for which they were collected or otherwise processed;
 - the personal data have been unlawfully processed;
 - the personal data have to be erased for compliance with a legal obligation in Union or Member State law to which the controller is subject;
+
+## Erasing the data of a user
+Just like the data access request, a user can ask you to delete their data.
+
+Navigate to `Tools > Erase Personal Data`.
+![Erase_User](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step3/EraseData.png?raw=true)
