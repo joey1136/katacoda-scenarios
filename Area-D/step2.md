@@ -2,7 +2,7 @@ Data rectification allow users to request their stored data to be rectified. If 
 
 The data subject shall have the right to obtain from the controller without undue delay the rectification of inaccurate personal data concerning him or her. Taking into account the purposes of the processing, the data subject shall have the right to have incomplete personal data completed, including by means of providing a supplementary statement.
 
-Edit Order
+## Edit Order
 
 Navigate to `WooComerce > Orders`. Click into the order wished to be edited. 
 
@@ -12,7 +12,7 @@ Order datails like Billing Details or shipping address can be edited.
 
 ![Edit_Order_Detail](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step2/EditOrderDetail.png?raw=true)
 
-Edit Personal Data
+## Edit Personal Data
 
 Navigate to `Users > All Users`. When the mouse is over a user, a "Edit" button will appear.
 
