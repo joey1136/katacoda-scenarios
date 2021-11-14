@@ -18,3 +18,15 @@ Navigate to `Plugins`, click on [add new] button and search for "WP phpMyAdmin".
 After installation and activation, `WP phpMyAdmin` menu will appear on Dashboard left sidebar. Untick the "Restrict access only to current IP" option and save. Click the [Enter phpMyAdmin] to enter the system.
 
 ![php2](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step5/php2.png?raw=true)
+
+In the system, click the [SQL] button to enter the console. Enter the following queries: `use wordpress;select * from `wp_users`;`. Click the [Go] button to execute the queries.
+
+![php3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step5/php3.png?raw=true)
+
+The personal data of the users is showed. You may click the [Export] button to export the result.
+
+![php4](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step5/php4.png?raw=true)
+
+Click the go button to download the result.
+
+![php5](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step5/php5.png?raw=true)
