@@ -15,6 +15,6 @@ Navigate to `Plugins`, click on [add new] button and search for "WP phpMyAdmin".
 
 ![php1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step5/php1.png?raw=true)
 
-After installation and activation, `WP phpMyAdmin` menu will appear on Dashboard left sidebar. Untick the "Restrict access only to current IP" option and click the [Enter phpMyAdmin].
+After installation and activation, `WP phpMyAdmin` menu will appear on Dashboard left sidebar. Untick the "Restrict access only to current IP" option and save. Click the [Enter phpMyAdmin] to enter the system.
 
 ![php2](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step5/php2.png?raw=true)
