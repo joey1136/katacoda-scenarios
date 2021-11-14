@@ -45,22 +45,3 @@ The following the command/environment variables explanation:
 Check that the WordPress container is running.
 
 `docker ps`{{execute}}
-
-# Install Plugin for Wordpress
-
-Navigate in Dashboard to Plugins admin page, click on [add new] button and search for wpForo. Then click on [Install Now] button, wait for installation. 
-
-![InstallWPForo](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step0/InstallWPForo.png?raw=true)
-
-Once it’s completed click on [Activate] button.
-
-![ActicateWPForo](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step0/ActicateWPForo.png?raw=true)
-
-Once wpForo is activated, it gets WordPress Users information and creates forum member Profile data automatically in database. However if there are more than 100 users in your database it ask you to do this step manually by clicking [Continue Synchronization >>] button.
-
-![SyncWPForo](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step0/SyncWPForo.png?raw=true)
-
-After installation, activation and user profile data synchronization you’ll see “Forums” menu on Dashboard left sidebar. This is wpForo Settings menu.
-
-![DoneWPForo](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step0/DoneWPForo.png?raw=true)
-
