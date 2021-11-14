@@ -4,6 +4,8 @@ The data subject shall have the right to obtain from the controller without undu
 
 ## Edit Order
 
+When user found their information in their order is inaccurate, they can contact the admin for data rectification.
+
 Navigate to `WooComerce > Orders`. Click into the order wished to be edited. 
 
 ![Edit_Order](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step2/EditOrder.png?raw=true)
@@ -13,6 +15,8 @@ Order datails like Billing Details or shipping address can be edited.
 ![Edit_Order_Detail](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step2/EditOrderDetail.png?raw=true)
 
 ## Edit Personal Data
+
+When user found their information in their profile is inaccurate, they can contact the admin for data rectification.
 
 Navigate to `Users > All Users`. When the mouse is over a user, a "Edit" button will appear.
 
