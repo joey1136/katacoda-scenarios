@@ -9,4 +9,7 @@ The data subject shall have the right to obtain from the controller the erasure 
 Just like the data access request, a user can ask you to delete their data.
 
 Navigate to `Tools > Erase Personal Data`.
+
 ![Erase_User](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step3/EraseData.png?raw=true)
+
+To send the request, type their email address in the box provided and hit “Send Request.” They’ll receive an email with a confirmation link, which they’ll use to confirm the request. While you’re waiting for the customer to confirm, you’ll see the request displayed as “Pending.” Once they click the link, the status switches to “Confirmed”. The right of access is then granted to the person.
