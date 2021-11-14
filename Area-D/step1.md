@@ -12,7 +12,7 @@ the right to lodge a complaint with a supervisory authority;
 - where the personal data are not collected from the data subject, any available information as to their source;
 - the existence of automated decision-making, including profiling, meaningful information about the logic involved, as well as the significance and the envisaged consequences of such processing for the data subject.
 
-## Confirm identity of the requester
+## Accessing Personal Data
 According to the GDPR, your users can demand access to their information stored in your server. It is important to be able to retrieve these data, when you receive a request from a user. 
 
 When The First Request Comes In, confirm the identity of the person making the request before you export their personal data.  WordPress has a new page under `Tools > Export Personal Data` where you can send a confirmation request to the customer’s email address (or via their username, if they’re a registered user on the site):
