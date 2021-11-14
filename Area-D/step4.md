@@ -17,5 +17,8 @@ A proper consent management system encompasses the following:
 
 ## Plugin Installation to Obtain Consent
 
-Navigate to `Plugins`, click on [add new] button and search for "GDPR Cookie Compliance (CCPA ready)":
+Navigate to `Plugins`, click on [add new] button and search for "GDPR Cookie Compliance (CCPA ready)".
+
 ![Cookie1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step4/Cookie1.png?raw=true)
+
+
