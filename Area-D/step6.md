@@ -4,3 +4,12 @@ The data subject shall have the right to object, on grounds relating to his or h
 
 ## Objecting the use of personl data (User)
 By Clearing the cookies of the site, users are able to object the use of personal data. If user remove cookies, they will be signed out of the site and their saved preferences could be deleted.
+
+The following are the steps to remove cookies on Chrome:
+- At the top right, click ![More](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step6/settinglogo.png?raw=true)`More > Settings`.
+- Under 'Privacy and security', click Cookies and other site data.
+- Click See all cookies and site data.
+- Search for "katacoda".
+- Delete the "2886795329-10080-elsy05.environments.katacoda.com", which is the cookie accepted to the site in step 5.
+
+![CookieDelete](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step6/deletecookie.PNG?raw=true)
