@@ -19,7 +19,7 @@ After installation and activation, `WP phpMyAdmin` menu will appear on Dashboard
 
 ![php2](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step5/php2.png?raw=true)
 
-In the system, click the [SQL] button to enter the console. Enter the following queries: `use wordpress;select * from `wp_users`;`. Click the [Go] button to execute the queries.
+In the system, click the [SQL] button to enter the console. Enter the following queries: ``use wordpress;select * from `wp_users`;``. Click the [Go] button to execute the queries.
 
 ![php3](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step5/php3.png?raw=true)
 
