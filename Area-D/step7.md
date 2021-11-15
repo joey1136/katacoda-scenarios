@@ -15,6 +15,16 @@ Organisations obtain personal information about individuals from a variety of di
 
 Any form of automated processing of personal data consisting of the use of personal data to evaluate certain personal aspects relating to a natural person, in particular to analyse or predict aspects concerning that natural person’s performance at work, economic situation, health, personal preferences, interests, reliability, behaviour, location or movements.
 
+Organisations use profiling to:
+
+- find something out about individuals’ preferences;
+- predict their behaviour; and/or
+- make decisions about them.
+
+This can be very useful for organisations and individuals in many sectors, including healthcare, education, financial services and marketing.
+
+Automated individual decision-making and profiling can lead to quicker and more consistent decisions. But if they are used irresponsibly there are significant risks for individuals. The UK GDPR provisions are designed to address these risks.
+
 ## Right not to be subject to automated decision-making
 
 Individuals have the right not to be subject to a decision when:
