@@ -40,3 +40,5 @@ You must ensure that individuals are able to:
 To qualify as human intervention, you must ensure that you carefully analyse the decision and consider all the available input and output data, rather than just a token review. This should be carried out by someone who has the authority and competence to change the decision.
 
 The data subject shall have the right not to be subject to a decision based solely on automated processing, including profiling, which produces legal effects concerning him or her or similarly significantly affects him or her.
+
+The restriction only covers solely automated individual decision-making that produces legal or similarly significant effects. A legal effect is something that affects someone’s legal rights. Similarly significant effects are more difficult to define but would include, for example, automatic refusal of an online credit application, and e-recruiting practices without human intervention.
