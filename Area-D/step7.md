@@ -42,3 +42,13 @@ To qualify as human intervention, you must ensure that you carefully analyse the
 The data subject shall have the right not to be subject to a decision based solely on automated processing, including profiling, which produces legal effects concerning him or her or similarly significantly affects him or her.
 
 The restriction only covers solely automated individual decision-making that produces legal or similarly significant effects. A legal effect is something that affects someone’s legal rights. Similarly significant effects are more difficult to define but would include, for example, automatic refusal of an online credit application, and e-recruiting practices without human intervention.
+
+## Objecting automated processing and profiling
+
+During the set up of woocommerce, the system advised the user to recieve auto promotional email. There is a tickbox nearby which allow the user to accept or reject the automated processing.
+
+![auto1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step7/profiling1.PNG?raw=true)
+
+Also during the set up of woocommerce, the system advise the user be tracked to get a better user experience. User may accept or reject the profiling by clicking the [Yes] or [No] button.
+
+![profiling1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step7/profiling2.PNG?raw=true)
