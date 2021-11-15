@@ -11,5 +11,6 @@ The following are the steps to remove cookies on Chrome:
 - Click See all cookies and site data.
 - Search for "katacoda".
 - Delete the "2886795329-10080-elsy05.environments.katacoda.com", which is the cookie accepted to the site in step 5.
+- After the deletion, the site will ask for the permission from user again.
 
 ![CookieDelete](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step6/deletecookie.PNG?raw=true)
