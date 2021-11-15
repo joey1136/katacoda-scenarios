@@ -1,3 +1,22 @@
+## Automated individual decision-making 
+
+Automated individual decision-making is a decision made by automated means without any human involvement.
+
+Examples of this include:
+
+- an online decision to award a loan; and
+- a recruitment aptitude test which uses pre-programmed algorithms and criteria.
+
+Automated individual decision-making does not have to involve profiling, although it often will do.
+
+## Profiling
+
+Any form of automated processing of personal data consisting of the use of personal data to evaluate certain personal aspects relating to a natural person, in particular to analyse or predict aspects concerning that natural person’s performance at work, economic situation, health, personal preferences, interests, reliability, behaviour, location or movements.
+
+Organisations obtain personal information about individuals from a variety of different sources. Internet searches, buying habits, lifestyle and behaviour data gathered from mobile phones, social networks, video surveillance systems and the Internet of Things are examples of the types of data organisations might collect.
+
+## Right not to be subject to automated decision-making
+
 Individuals have the right not to be subject to a decision when:
 
 - it is based on automated processing; and
