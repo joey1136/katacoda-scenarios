@@ -45,7 +45,7 @@ The restriction only covers solely automated individual decision-making that pro
 
 ## Objecting automated processing and profiling
 
-During the set up of woocommerce, the system advised the user to recieve auto promotional email. There is a tickbox nearby which allow the user to accept or reject the automated processing.
+During the set up of woocommerce, the system advised the user to receive auto promotional email. There is a tickbox nearby which allow the user to accept or reject the automated processing.
 
 ![auto1](https://github.com/joey1136/katacoda-scenarios/blob/main/Area-D/images/step7/profiling1.PNG?raw=true)
 
